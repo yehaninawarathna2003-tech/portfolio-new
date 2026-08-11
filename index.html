@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J.A. Yehani Prabodhya | ICT Undergraduate & Web Developer Portfolio</title>
+    <meta name="description" content="Personal Portfolio of J.A. Yehani Prabodhya - ICT Undergraduate at University of Vavuniya specializing in Web Development, Database Management, and System Analysis & Design.">
+    <meta name="keywords" content="Yehani Prabodhya, ICT Undergraduate, Web Development, Portfolio, HTML, CSS, JavaScript, SQL, System Analysis, University of Vavuniya">
+    <meta name="author" content="J.A. Yehani Prabodhya">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Ambient Canvas Background -->
+    <canvas id="ambient-canvas"></canvas>
+    
+    <!-- Navigation Header -->
+    <header class="navbar-header" id="header">
+        <div class="nav-container">
+            <a href="#home" class="nav-brand" aria-label="Yehani Prabodhya Home">
+                <span class="brand-name">Yehani Prabodhya</span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About Me</a></li>
+                    <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                    <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                    <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+                    <li class="nav-item"><a href="#cv" class="nav-link">CV</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="nav-controls">
+                <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle light and dark mode">
+                    <i class="fa-solid fa-moon moon-icon"></i>
+                    <i class="fa-solid fa-sun sun-icon"></i>
+                </button>
+                
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Open mobile menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <!-- 1. HOME / HERO SECTION -->
+        <section id="home" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="badge-pill">
+                        <span class="pulse-dot"></span> Available for Internships & Projects
+                    </div>
+                    
+                    <h1 class="hero-name">
+                        Hi, I'm <span class="gradient-text">J.A. Yehani Prabodhya</span>
+                    </h1>
+                    
+                    <h2 class="hero-title">
+                        <span class="typewriter-prefix">ICT Undergraduate</span>
+                        <span class="title-divider">|</span>
+                        <span class="gradient-accent">Web Development Enthusiast</span>
+                    </h2>
+                    
+                    <p class="hero-intro">
+                        I am an Information and Communication Technology undergraduate with an interest in web development, software design, and creative technology. I enjoy learning new technologies and developing practical projects that improve my technical skills. I am currently improving my knowledge of HTML, CSS, JavaScript, database management, and system analysis and design.
+                    </p>
+                    
+                    <div class="hero-cta-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fa-solid fa-folder-open"></i> View My Projects
+                        </a>
+                        <a href="#cv" class="btn btn-secondary btn-glow">
+                            <i class="fa-solid fa-file-arrow-down"></i> Download CV
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <i class="fa-solid fa-paper-plane"></i> Contact Me
+                        </a>
+                    </div>
+                    
+                    <div class="hero-quick-tags">
+                        <span class="tag-title">Focus Areas:</span>
+                        <span class="tag"><i class="fa-brands fa-html5"></i> Web Dev</span>
+                        <span class="tag"><i class="fa-solid fa-database"></i> DBMS</span>
+                        <span class="tag"><i class="fa-solid fa-diagram-project"></i> SAD & UML</span>
+                        <span class="tag"><i class="fa-solid fa-cubes"></i> 3D & Design</span>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="avatar-card glass-card">
+                        <div class="avatar-wrapper">
+                            <img src="assets/avatar.png" alt="J.A. Yehani Prabodhya Profile" class="avatar-img">
+                            <div class="avatar-glow"></div>
+                        </div>
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <span class="stat-num" data-count="3">3+</span>
+                                <span class="stat-label">Core Projects</span>
+                            </div>
+                            <div class="stat-divider"></div>
+                            <div class="stat-item">
+                                <span class="stat-num">BICT</span>
+                                <span class="stat-label">Degree Underway</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. ABOUT ME SECTION -->
+        <section id="about" class="about-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Get To Know Me</span>
+                    <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="about-grid">
+                    <div class="about-card glass-card">
+                        <div class="about-icon-header">
+                            <i class="fa-solid fa-user-graduate"></i>
+                            <h3>My Journey</h3>
+                        </div>
+                        <p class="about-text">
+                            I am a motivated and enthusiastic ICT undergraduate with a strong interest in technology and software development. I enjoy creating websites and learning how different technologies can be used to develop useful and user-friendly digital solutions.
+                        </p>
+                        <p class="about-text">
+                            I am particularly interested in web development and enjoy working with HTML, CSS, and JavaScript. I also have an interest in creative technologies and digital design.
+                        </p>
+                        <p class="about-text">
+                            I am always willing to learn new technologies, improve my existing skills, and take on new challenges. My goal is to develop myself as a professional in the IT field and contribute to meaningful technology projects.
+                        </p>
+                    </div>
+                    
+                    <div class="objective-card glass-card highlight-card">
+                        <div class="objective-badge">
+                            <i class="fa-solid fa-bullseye"></i> Career Goal
+                        </div>
+                        <h3>Career Objective</h3>
+                        <p class="objective-text">
+                            My career objective is to become a skilled IT professional with strong knowledge of web development and software design. I aim to gain practical industry experience, improve my technical and problem-solving abilities, and develop innovative and user-friendly digital solutions.
+                        </p>
+                        <div class="objective-highlights">
+                            <div class="obj-item">
+                                <i class="fa-solid fa-check-circle"></i>
+                                <span>Industry Experience & Growth</span>
+                            </div>
+                            <div class="obj-item">
+                                <i class="fa-solid fa-check-circle"></i>
+                                <span>Web Development Mastery</span>
+                            </div>
+                            <div class="obj-item">
+                                <i class="fa-solid fa-check-circle"></i>
+                                <span>Innovative Digital Solutions</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. EDUCATION SECTION -->
+        <section id="education" class="education-section section-padding alt-bg">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Academic Background</span>
+                    <h2 class="section-title">My <span class="gradient-text">Education</span></h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="education-container">
+                    <div class="edu-main-card glass-card">
+                        <div class="edu-header">
+                            <div class="edu-icon">
+                                <i class="fa-solid fa-building-columns"></i>
+                            </div>
+                            <div class="edu-title-group">
+                                <span class="status-badge"><i class="fa-solid fa-spinner fa-spin"></i> Current Status: Undergraduate</span>
+                                <h3>Bachelor of Information and Communication Technology</h3>
+                                <h4>University of Vavuniya</h4>
+                                <p class="faculty-info"><i class="fa-solid fa-graduation-cap"></i> Faculty of Technological Studies | Department of ICT</p>
+                            </div>
+                        </div>
+                        
+                        <div class="edu-body-grid">
+                            <!-- Relevant Coursework -->
+                            <div class="coursework-box">
+                                <h4 class="box-title"><i class="fa-solid fa-book-open"></i> Relevant Coursework</h4>
+                                <ul class="course-list">
+                                    <li><i class="fa-solid fa-diagram-project"></i> System Analysis and Design</li>
+                                    <li><i class="fa-solid fa-database"></i> Database Management Systems</li>
+                                    <li><i class="fa-solid fa-network-wired"></i> Computer Networks</li>
+                                    <li><i class="fa-solid fa-chart-line"></i> Operations Research</li>
+                                    <li><i class="fa-solid fa-desktop"></i> Computer Graphics</li>
+                                    <li><i class="fa-solid fa-calculator"></i> Accounting</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Academic Highlights -->
+                            <div class="highlights-box">
+                                <h4 class="box-title"><i class="fa-solid fa-star"></i> Academic Highlights</h4>
+                                <ul class="highlight-list">
+                                    <li><i class="fa-solid fa-circle-check"></i> Developing practical web development skills</li>
+                                    <li><i class="fa-solid fa-circle-check"></i> Learning database design and SQL</li>
+                                    <li><i class="fa-solid fa-circle-check"></i> Studying system analysis and design</li>
+                                    <li><i class="fa-solid fa-circle-check"></i> Developing programming and problem-solving skills</li>
+                                    <li><i class="fa-solid fa-circle-check"></i> Working on academic projects and practical assignments</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. SKILLS SECTION -->
+        <section id="skills" class="skills-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Technical & Interpersonal Abilities</span>
+                    <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <!-- Category 1: Technical Skills -->
+                <div class="skills-category-title">
+                    <i class="fa-solid fa-laptop-code"></i> Technical Skills
+                </div>
+                
+                <div class="skills-grid">
+                    <!-- Web Development -->
+                    <div class="skill-card glass-card">
+                        <div class="skill-card-header">
+                            <i class="fa-brands fa-code-compare skill-cat-icon"></i>
+                            <h3>Web Development</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-bar-item">
+                                <div class="skill-info">
+                                    <span><i class="fa-brands fa-html5 text-orange"></i> HTML5</span>
+                                    <span class="skill-pct">Advanced</span>
+                                </div>
+                                <div class="progress-line"><span style="width: 90%;"></span></div>
+                            </div>
+                            <div class="skill-bar-item">
+                                <div class="skill-info">
+                                    <span><i class="fa-brands fa-css3-alt text-blue"></i> CSS3</span>
+                                    <span class="skill-pct">Intermediate</span>
+                                </div>
+                                <div class="progress-line"><span style="width: 85%;"></span></div>
+                            </div>
+                            <div class="skill-bar-item">
+                                <div class="skill-info">
+                                    <span><i class="fa-brands fa-js text-yellow"></i> JavaScript</span>
+                                    <span class="skill-pct">Intermediate</span>
+                                </div>
+                                <div class="progress-line"><span style="width: 75%;"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Database -->
+                    <div class="skill-card glass-card">
+                        <div class="skill-card-header">
+                            <i class="fa-solid fa-database skill-cat-icon"></i>
+                            <h3>Database Management</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-bar-item">
+                                <div class="skill-info">
+                                    <span><i class="fa-solid fa-terminal text-green"></i> SQL</span>
+                                    <span class="skill-pct">Intermediate</span>
+                                </div>
+                                <div class="progress-line"><span style="width: 80%;"></span></div>
+                            </div>
+                            <div class="skill-bar-item">
+                                <div class="skill-info">
+                                    <span><i class="fa-solid fa-sitemap text-purple"></i> Database Design</span>
+                                    <span class="skill-pct">Intermediate</span>
+                                </div>
+                                <div class="progress-line"><span style="width: 82%;"></span></div>
+                            </div>
+                            <div class="skill-bar-item">
+                                <div class="skill-info">
+                                    <span><i class="fa-solid fa-diagram-next text-pink"></i> ER Diagrams</span>
+                                    <span class="skill-pct">Proficient</span>
+                                </div>
+                                <div class="progress-line"><span style="width: 85%;"></span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- System Analysis & Design -->
+                    <div class="skill-card glass-card">
+                        <div class="skill-card-header">
+                            <i class="fa-solid fa-diagram-project skill-cat-icon"></i>
+                            <h3>System Analysis & Design</h3>
+                        </div>
+                        <div class="skill-chips">
+                            <span class="chip"><i class="fa-solid fa-circle-nodes"></i> UML</span>
+                            <span class="chip"><i class="fa-solid fa-user-gear"></i> Use Case Diagrams</span>
+                            <span class="chip"><i class="fa-solid fa-route"></i> Activity Diagrams</span>
+                            <span class="chip"><i class="fa-solid fa-arrows-split-up-and-left"></i> Data Flow Diagrams (DFD)</span>
+                            <span class="chip"><i class="fa-solid fa-clipboard-check"></i> Requirements Analysis</span>
+                        </div>
+                    </div>
+
+                    <!-- Creative & Other -->
+                    <div class="skill-card glass-card">
+                        <div class="skill-card-header">
+                            <i class="fa-solid fa-wand-magic-sparkles skill-cat-icon"></i>
+                            <h3>Creative & Other Tools</h3>
+                        </div>
+                        <div class="skill-chips">
+                            <span class="chip"><i class="fa-solid fa-cube"></i> Blender 3D</span>
+                            <span class="chip"><i class="fa-solid fa-palette"></i> Basic UI Design</span>
+                            <span class="chip"><i class="fa-brands fa-git-alt"></i> Git</span>
+                            <span class="chip"><i class="fa-brands fa-github"></i> GitHub</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 2: Soft Skills -->
+                <div class="skills-category-title mt-5">
+                    <i class="fa-solid fa-heart-pulse"></i> Soft Skills
+                </div>
+                
+                <div class="soft-skills-grid">
+                    <div class="soft-skill-badge glass-card">
+                        <i class="fa-solid fa-comments"></i>
+                        <span>Communication</span>
+                    </div>
+                    <div class="soft-skill-badge glass-card">
+                        <i class="fa-solid fa-people-group"></i>
+                        <span>Teamwork</span>
+                    </div>
+                    <div class="soft-skill-badge glass-card">
+                        <i class="fa-solid fa-brain"></i>
+                        <span>Problem Solving</span>
+                    </div>
+                    <div class="soft-skill-badge glass-card">
+                        <i class="fa-solid fa-lightbulb"></i>
+                        <span>Creativity</span>
+                    </div>
+                    <div class="soft-skill-badge glass-card">
+                        <i class="fa-solid fa-clock"></i>
+                        <span>Time Management</span>
+                    </div>
+                    <div class="soft-skill-badge glass-card">
+                        <i class="fa-solid fa-sliders"></i>
+                        <span>Adaptability</span>
+                    </div>
+                    <div class="soft-skill-badge glass-card">
+                        <i class="fa-solid fa-bolt"></i>
+                        <span>Quick Learning</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. PROJECTS SECTION -->
+        <section id="projects" class="projects-section section-padding alt-bg">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Practical Work & Assignments</span>
+                    <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="projects-grid">
+                    <!-- Project 01 -->
+                    <article class="project-card glass-card">
+                        <div class="project-img-wrapper">
+                            <img src="assets/portfolio_preview.png" alt="Personal Portfolio Website Preview" class="project-img">
+                            <div class="project-badge">Project 01</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Personal Portfolio Website</h3>
+                            <p class="project-desc">
+                                A responsive personal portfolio website developed to present my education, skills, projects, career objectives, and contact information in a professional way.
+                            </p>
+                            
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                            
+                            <div class="project-details-block">
+                                <h4><i class="fa-solid fa-user-check"></i> My Contribution:</h4>
+                                <ul>
+                                    <li>Designed the website structure</li>
+                                    <li>Developed the web pages</li>
+                                    <li>Created the user interface</li>
+                                    <li>Added responsive design</li>
+                                    <li>Added JavaScript functionality</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="project-learned">
+                                <p><strong><i class="fa-solid fa-lightbulb"></i> What I Learned:</strong> This project helped me improve my web development, user interface design, responsive design, and problem-solving skills.</p>
+                            </div>
+                            
+                            <button class="btn btn-secondary btn-block modal-trigger" data-modal="modal-p1">
+                                <i class="fa-solid fa-expand"></i> View Full Details
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Project 02 -->
+                    <article class="project-card glass-card">
+                        <div class="project-img-wrapper">
+                            <img src="assets/pos_preview.png" alt="Supermarket POS System Preview" class="project-img">
+                            <div class="project-badge">Project 02</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Supermarket POS System</h3>
+                            <p class="project-desc">
+                                A proposed Point of Sale system designed to help a supermarket manage sales, products, customers, and stock efficiently.
+                            </p>
+                            
+                            <div class="project-features-chips">
+                                <span class="feat-chip"><i class="fa-solid fa-box"></i> Product Mgmt</span>
+                                <span class="feat-chip"><i class="fa-solid fa-cash-register"></i> Sales Mgmt</span>
+                                <span class="feat-chip"><i class="fa-solid fa-warehouse"></i> Stock Mgmt</span>
+                                <span class="feat-chip"><i class="fa-solid fa-users"></i> Customer Mgmt</span>
+                                <span class="feat-chip"><i class="fa-solid fa-receipt"></i> Bill Generation</span>
+                            </div>
+                            
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Database</span>
+                            </div>
+                            
+                            <div class="project-details-block">
+                                <h4><i class="fa-solid fa-user-check"></i> My Contribution:</h4>
+                                <ul>
+                                    <li>Worked on planning the system features</li>
+                                    <li>Designed a simple and user-friendly interface</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="project-learned">
+                                <p><strong><i class="fa-solid fa-lightbulb"></i> What I Learned:</strong> This project helped me understand how software systems can be designed to solve real-world business problems.</p>
+                            </div>
+                            
+                            <button class="btn btn-secondary btn-block modal-trigger" data-modal="modal-p2">
+                                <i class="fa-solid fa-expand"></i> View Full Details
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Project 03 -->
+                    <article class="project-card glass-card">
+                        <div class="project-img-wrapper">
+                            <img src="assets/bakery_db_preview.png" alt="Bakery Database Management System Preview" class="project-img">
+                            <div class="project-badge">Project 03</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Bakery Database Management System</h3>
+                            <p class="project-desc">
+                                A database system designed to manage bakery product information, including product names, categories, prices, quantities, suppliers, manufacture dates, and expiry dates.
+                            </p>
+                            
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">SQL</span>
+                                <span class="tech-tag">DBMS</span>
+                                <span class="tech-tag">ER Diagram</span>
+                            </div>
+                            
+                            <div class="project-details-block">
+                                <h4><i class="fa-solid fa-user-check"></i> My Contribution:</h4>
+                                <ul>
+                                    <li>Designed database tables</li>
+                                    <li>Identified attributes & entities</li>
+                                    <li>Created relationships</li>
+                                    <li>Added sample data</li>
+                                    <li>Created SQL queries</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="project-learned">
+                                <p><strong><i class="fa-solid fa-lightbulb"></i> What I Learned:</strong> This project improved my understanding of database design, SQL, relationships, and data management.</p>
+                            </div>
+                            
+                            <button class="btn btn-secondary btn-block modal-trigger" data-modal="modal-p3">
+                                <i class="fa-solid fa-expand"></i> View Full Details
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. EXPERIENCE & ACTIVITIES SECTION -->
+        <section id="experience" class="experience-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Growth & Engagement</span>
+                    <h2 class="section-title">Experience & <span class="gradient-text">Activities</span></h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="experience-grid">
+                    <!-- Academic Activities -->
+                    <div class="exp-card glass-card">
+                        <div class="exp-icon">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <h3>Academic Activities</h3>
+                        <p>
+                            As an ICT undergraduate, I participate in academic projects and practical activities related to programming, web development, database management, system analysis, networking, and computer graphics.
+                        </p>
+                        <div class="exp-tags">
+                            <span>Programming</span>
+                            <span>Web Dev</span>
+                            <span>DBMS</span>
+                            <span>System Analysis</span>
+                            <span>Networks</span>
+                            <span>Graphics</span>
+                        </div>
+                    </div>
+
+                    <!-- Personal Learning -->
+                    <div class="exp-card glass-card">
+                        <div class="exp-icon">
+                            <i class="fa-solid fa-book-bookmark"></i>
+                        </div>
+                        <h3>Personal Learning</h3>
+                        <p>
+                            I regularly practise web development and explore new technologies to improve my technical knowledge. I am also interested in creative tools such as Blender and digital design.
+                        </p>
+                        <div class="exp-tags">
+                            <span>Self-Paced Practice</span>
+                            <span>Blender 3D</span>
+                            <span>UI Design</span>
+                            <span>Modern Web Standards</span>
+                        </div>
+                    </div>
+
+                    <!-- Future Career Development -->
+                    <div class="exp-card glass-card">
+                        <div class="exp-icon">
+                            <i class="fa-solid fa-rocket"></i>
+                        </div>
+                        <h3>Future Career Development</h3>
+                        <p>
+                            I am interested in gaining practical industry experience through internships and real-world projects. I hope to work with experienced professionals and apply my academic knowledge to practical situations.
+                        </p>
+                        <div class="exp-tags">
+                            <span>IT Internships</span>
+                            <span>Industry Mentorship</span>
+                            <span>Real-world Impact</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. CV SECTION -->
+        <section id="cv" class="cv-section section-padding alt-bg">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Curriculum Vitae</span>
+                    <h2 class="section-title">Download My <span class="gradient-text">CV</span></h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="cv-card glass-card">
+                    <div class="cv-badge"><i class="fa-solid fa-file-pdf"></i> Verified PDF Format</div>
+                    
+                    <div class="cv-content-group">
+                        <h3>Curriculum Vitae Overview</h3>
+                        <p class="cv-intro-text">
+                            My CV provides detailed information about my education, technical skills, projects, achievements, and career interests.
+                        </p>
+                        <p class="cv-note">
+                            <i class="fa-solid fa-circle-info"></i> Your assignment requires an updated professional CV in PDF format. Click below to view and download the formatted PDF.
+                        </p>
+                        
+                        <div class="cv-actions">
+                            <button id="download-cv-btn" class="btn btn-primary btn-lg btn-glow">
+                                <i class="fa-solid fa-download"></i> Download CV (PDF)
+                            </button>
+                            <button id="preview-cv-btn" class="btn btn-secondary btn-lg">
+                                <i class="fa-solid fa-eye"></i> Preview Interactive CV
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. CONTACT & LINKS SECTION -->
+        <section id="contact" class="contact-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Get In Touch</span>
+                    <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="contact-wrapper">
+                    <!-- Info Column -->
+                    <div class="contact-info-col glass-card">
+                        <h3>Contact Information</h3>
+                        <p class="contact-lead">
+                            I am always interested in learning, collaborating on projects, and exploring new opportunities in the field of technology. Feel free to connect with me through the platforms below.
+                        </p>
+                        
+                        <div class="info-icons-only">
+                            <a href="mailto:yehani.prabodhya@example.com" class="icon-contact-btn" title="Email: yehani.prabodhya@example.com" aria-label="Email">
+                                <i class="fa-solid fa-envelope"></i>
+                            </a>
+                            <a href="https://github.com/yehani-prabodhya" target="_blank" rel="noopener" class="icon-contact-btn" title="GitHub Profile" aria-label="GitHub">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/yehani-prabodhya" target="_blank" rel="noopener" class="icon-contact-btn" title="LinkedIn Profile" aria-label="LinkedIn">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                            <div class="icon-contact-btn" title="Location: Sri Lanka" aria-label="Location: Sri Lanka">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form Column -->
+                    <div class="contact-form-col glass-card">
+                        <h3>Send Me a Message</h3>
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" name="email" required placeholder="name@example.com">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required placeholder="Project / Internship / Collaboration Inquiry">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Type your message here..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-block">
+                                <i class="fa-solid fa-paper-plane"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <a href="#home" class="footer-logo">J.A. Yehani Prabodhya</a>
+                <p>ICT Undergraduate | University of Vavuniya</p>
+            </div>
+            
+            <div class="footer-nav">
+                <a href="#home">Home</a>
+                <a href="#about">About Me</a>
+                <a href="#education">Education</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#cv">CV</a>
+                <a href="#contact">Contact</a>
+            </div>
+            
+            <div class="footer-right">
+                <a href="#home" class="back-to-top" aria-label="Back to Top">
+                    <i class="fa-solid fa-arrow-up"></i>
+                </a>
+                <p class="copyright">&copy; 2026 J.A. Yehani Prabodhya. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODALS FOR PROJECTS -->
+    <!-- Modal 1 -->
+    <div class="modal-overlay" id="modal-p1">
+        <div class="modal-container glass-card">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <h3>Personal Portfolio Website</h3>
+                <span class="modal-subtitle">Project 01 — Web Development</span>
+            </div>
+            <div class="modal-body">
+                <img src="assets/portfolio_preview.png" alt="Portfolio Detailed Preview" class="modal-img">
+                <p><strong>Description:</strong> A responsive personal portfolio website developed to present my education, skills, projects, career objectives, and contact information in a professional way.</p>
+                <h4>Technologies Used:</h4>
+                <div class="tech-tags">
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">CSS3</span>
+                    <span class="tech-tag">JavaScript</span>
+                </div>
+                <h4>Detailed Contributions:</h4>
+                <ul>
+                    <li>Designed the website layout and modern color palette.</li>
+                    <li>Developed responsive semantic HTML markup for all SAD assignment sections.</li>
+                    <li>Created custom glassmorphism styling and dark/light mode CSS.</li>
+                    <li>Implemented dynamic JavaScript features, smooth scrolling, and form notifications.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="modal-overlay" id="modal-p2">
+        <div class="modal-container glass-card">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <h3>Supermarket POS System</h3>
+                <span class="modal-subtitle">Project 02 — System Analysis & UI Design</span>
+            </div>
+            <div class="modal-body">
+                <img src="assets/pos_preview.png" alt="POS System Detailed Preview" class="modal-img">
+                <p><strong>Description:</strong> A proposed Point of Sale system designed to help a supermarket manage sales, products, customers, and stock efficiently.</p>
+                <h4>Core Modules:</h4>
+                <div class="tech-tags">
+                    <span class="tech-tag">Product Management</span>
+                    <span class="tech-tag">Sales Management</span>
+                    <span class="tech-tag">Stock Management</span>
+                    <span class="tech-tag">Customer Management</span>
+                    <span class="tech-tag">Bill Generation</span>
+                </div>
+                <h4>Detailed Contributions:</h4>
+                <ul>
+                    <li>Conducted system analysis & requirements gathering for supermarket retail operations.</li>
+                    <li>Designed user-friendly wireframes and interface dashboards for checkout operators.</li>
+                    <li>Planned transaction data flows and bill printing logic.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div class="modal-overlay" id="modal-p3">
+        <div class="modal-container glass-card">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <h3>Bakery Database Management System</h3>
+                <span class="modal-subtitle">Project 03 — Database Design & SQL</span>
+            </div>
+            <div class="modal-body">
+                <img src="assets/bakery_db_preview.png" alt="Bakery Database Preview" class="modal-img">
+                <p><strong>Description:</strong> A database system designed to manage bakery product information, including product names, categories, prices, quantities, suppliers, manufacture dates, and expiry dates.</p>
+                <h4>Technologies Used:</h4>
+                <div class="tech-tags">
+                    <span class="tech-tag">SQL</span>
+                    <span class="tech-tag">Database Management System</span>
+                    <span class="tech-tag">ER Diagram</span>
+                </div>
+                <h4>Detailed Contributions:</h4>
+                <ul>
+                    <li>Designed normalized relational database schema (3NF).</li>
+                    <li>Created Entity-Relationship (ER) Diagrams showing relationships between products, categories, suppliers, and sales.</li>
+                    <li>Wrote DDL and DML SQL scripts with sample dataset insertion.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- CV PREVIEW MODAL -->
+    <div class="modal-overlay" id="modal-cv">
+        <div class="modal-container glass-card modal-lg">
+            <button class="modal-close">&times;</button>
+            <div class="cv-preview-paper" id="cv-print-area">
+                <div class="cv-paper-header">
+                    <h2>J.A. YEHANI PRABODHYA</h2>
+                    <p class="cv-paper-title">ICT Undergraduate | Web Development Enthusiast</p>
+                    <p class="cv-paper-contact">
+                        Location: Sri Lanka &bull; Email: yehani.prabodhya@example.com &bull; GitHub: github.com/yehani-prabodhya
+                    </p>
+                </div>
+                <hr>
+                
+                <div class="cv-paper-section">
+                    <h3>CAREER OBJECTIVE</h3>
+                    <p>My career objective is to become a skilled IT professional with strong knowledge of web development and software design. I aim to gain practical industry experience, improve my technical and problem-solving abilities, and develop innovative and user-friendly digital solutions.</p>
+                </div>
+
+                <div class="cv-paper-section">
+                    <h3>EDUCATION</h3>
+                    <p><strong>Bachelor of Information and Communication Technology (BICT)</strong> — Current Status: Undergraduate</p>
+                    <p>University of Vavuniya &bull; Faculty of Technological Studies &bull; Department of ICT</p>
+                    <p><em>Relevant Coursework:</em> System Analysis & Design, DBMS, Computer Networks, Operations Research, Computer Graphics, Accounting</p>
+                </div>
+
+                <div class="cv-paper-section">
+                    <h3>TECHNICAL SKILLS</h3>
+                    <p><strong>Web Development:</strong> HTML5, CSS3, JavaScript</p>
+                    <p><strong>Database:</strong> SQL, Database Design, ER Diagrams</p>
+                    <p><strong>System Analysis & Design:</strong> UML, Use Case Diagrams, Activity Diagrams, DFD, Requirements Analysis</p>
+                    <p><strong>Creative & Tools:</strong> Blender 3D, Basic UI Design, Git & GitHub</p>
+                    <p><strong>Soft Skills:</strong> Communication, Teamwork, Problem Solving, Creativity, Time Management, Adaptability, Quick Learning</p>
+                </div>
+
+                <div class="cv-paper-section">
+                    <h3>KEY ACADEMIC PROJECTS</h3>
+                    <p><strong>1. Personal Portfolio Website:</strong> HTML5, CSS3, JavaScript responsive web application.</p>
+                    <p><strong>2. Supermarket POS System:</strong> System feature planning & UI design for product, sales, stock, and customer management.</p>
+                    <p><strong>3. Bakery Database Management System:</strong> SQL database tables design, ER diagram modeling, and query development.</p>
+                </div>
+            </div>
+            
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="print-cv-modal-btn">
+                    <i class="fa-solid fa-print"></i> Print / Save as PDF
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION CONTAINER -->
+    <div id="toast-container"></div>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>
