@@ -1,174 +1,347 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>J.A. Yehani Prabodhya | ICT Undergraduate & Web Developer Portfolio</title>
-    <meta name="description" content="Personal Portfolio of J.A. Yehani Prabodhya - ICT Undergraduate at University of Vavuniya specializing in Web Development, Database Management, and System Analysis & Design.">
-    <meta name="keywords" content="Yehani Prabodhya, ICT Undergraduate, Web Development, Portfolio, HTML, CSS, JavaScript, SQL, System Analysis, University of Vavuniya">
-    <meta name="author" content="J.A. Yehani Prabodhya">
-    
+    <title>J.A. Yehani Prabodhya | UI/UX Designer & Web Developer</title>
+    <meta name="description"
+        content="Portfolio of J.A. Yehani Prabodhya Nawarathna, an ICT undergraduate at the University of Vavuniya with interests in UI/UX design, web development, Java, C#, and database management.">
+    <meta name="keywords"
+        content="Yehani Prabodhya, ICT Undergraduate, UI/UX Designer, Web Developer, Java, C#, Database Management, University of Vavuniya, Sri Lanka">
+    <meta name="author" content="J.A. Yehani Prabodhya Nawarathna">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="J.A. Yehani Prabodhya | UI/UX Designer & Web Developer">
+    <meta property="og:description"
+        content="Portfolio of J.A. Yehani Prabodhya Nawarathna, ICT Undergraduate at University of Vavuniya.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/avatar.jpg">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
+
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <!-- Ambient Canvas Background -->
-    <canvas id="ambient-canvas"></canvas>
-    
-    <!-- Navigation Header -->
+    <!-- Ambient Canvas Background Particles -->
+    <canvas id="ambient-canvas" aria-hidden="true"></canvas>
+
+    <!-- FIXED NAVIGATION HEADER -->
     <header class="navbar-header" id="header">
         <div class="nav-container">
-            <a href="#home" class="nav-brand" aria-label="Yehani Prabodhya Home">
-                <span class="brand-name">Yehani Prabodhya</span>
+            <a href="#home" class="nav-brand" aria-label="Yehani Prabodhya Portfolio Home">
+                <span class="brand-avatar">YP</span>
+                <span class="brand-name">Yehani <span class="gradient-text">Prabodhya</span></span>
             </a>
-            
-            <nav class="nav-menu" id="nav-menu">
+
+            <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
                 <ul class="nav-list">
-                    <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
-                    <li class="nav-item"><a href="#about" class="nav-link">About Me</a></li>
-                    <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
-                    <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
-                    <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
-                    <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
-                    <li class="nav-item"><a href="#cv" class="nav-link">CV</a></li>
-                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="#home" class="nav-link active"><i
+                                class="fa-solid fa-house nav-icon"></i><span>Home</span></a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link"><i
+                                class="fa-solid fa-user nav-icon"></i><span>About</span></a></li>
+                    <li class="nav-item"><a href="#education" class="nav-link"><i
+                                class="fa-solid fa-graduation-cap nav-icon"></i><span>Education</span></a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link"><i
+                                class="fa-solid fa-code nav-icon"></i><span>Skills</span></a></li>
+                    <li class="nav-item"><a href="#projects" class="nav-link"><i
+                                class="fa-solid fa-diagram-project nav-icon"></i><span>Projects</span></a></li>
+                    <li class="nav-item"><a href="#experience" class="nav-link"><i
+                                class="fa-solid fa-briefcase nav-icon"></i><span>Experience</span></a></li>
+                    <li class="nav-item"><a href="#cv" class="nav-link"><i
+                                class="fa-solid fa-file-pdf nav-icon"></i><span>CV</span></a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link"><i
+                                class="fa-solid fa-envelope nav-icon"></i><span>Contact</span></a></li>
                 </ul>
             </nav>
-            
+
             <div class="nav-controls">
-                <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle light and dark mode">
-                    <i class="fa-solid fa-moon moon-icon"></i>
-                    <i class="fa-solid fa-sun sun-icon"></i>
+                <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle dark and light mode"
+                    title="Switch Theme">
+                    <i class="fa-solid fa-moon moon-icon" aria-hidden="true"></i>
+                    <i class="fa-solid fa-sun sun-icon" aria-hidden="true"></i>
                 </button>
-                
-                <button class="mobile-toggle" id="mobile-toggle" aria-label="Open mobile menu">
-                    <i class="fa-solid fa-bars"></i>
+
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle mobile menu" aria-expanded="false"
+                    aria-controls="nav-menu">
+                    <i class="fa-solid fa-bars" aria-hidden="true"></i>
                 </button>
             </div>
         </div>
     </header>
 
-    <!-- MAIN CONTENT -->
-    <main>
+    <!-- MAIN CONTENT AREA -->
+    <main id="main-content">
+
         <!-- 1. HOME / HERO SECTION -->
         <section id="home" class="hero-section">
             <div class="container hero-container">
                 <div class="hero-content">
                     <div class="badge-pill">
-                        <span class="pulse-dot"></span> Available for Internships & Projects
+                        <span class="pulse-dot"></span>
+                        <span>Available for Internships &amp; Projects</span>
                     </div>
-                    
+
                     <h1 class="hero-name">
                         Hi, I'm <span class="gradient-text">J.A. Yehani Prabodhya</span>
                     </h1>
-                    
-                    <h2 class="hero-title">
-                        <span class="typewriter-prefix">ICT Undergraduate</span>
-                        <span class="title-divider">|</span>
-                        <span class="gradient-accent">Web Development Enthusiast</span>
-                    </h2>
-                    
-                    <p class="hero-intro">
-                        I am an Information and Communication Technology undergraduate with an interest in web development, software design, and creative technology. I enjoy learning new technologies and developing practical projects that improve my technical skills. I am currently improving my knowledge of HTML, CSS, JavaScript, database management, and system analysis and design.
+
+                    <p class="hero-title">
+                        <span class="title-highlight">ICT Undergraduate</span>
+                        <span class="title-divider">•</span>
+                        <span>Web Developer</span>
+                        <span class="title-divider">•</span>
+                        <span class="accent-text">UI/UX Designer</span>
                     </p>
-                    
+
+                    <p class="hero-intro">
+                        I'm a passionate UI/UX Designer and Web Developer who enjoys creating modern, user-friendly, and
+                        visually engaging digital experiences. I love turning ideas into clean and functional designs
+                        and developing responsive websites that provide a great user experience.
+                    </p>
+
+                    <p class="hero-university">
+                        I'm currently pursuing a <strong>Bachelor of Information and Communication Technology
+                            (Honours)</strong> at the <strong>University of Vavuniya</strong> while continuously
+                        improving my design and development skills.
+                    </p>
+
+                    <p class="hero-tagline">
+                        <i class="fa-solid fa-sparkles accent-sparkle"></i> Let's create something meaningful together.
+                    </p>
+
                     <div class="hero-cta-buttons">
                         <a href="#projects" class="btn btn-primary">
-                            <i class="fa-solid fa-folder-open"></i> View My Projects
+                            <i class="fa-solid fa-folder-open"></i>
+                            <span>View My Projects</span>
                         </a>
-                        <a href="#cv" class="btn btn-secondary btn-glow">
-                            <i class="fa-solid fa-file-arrow-down"></i> Download CV
+                        <a href="Yehani_CV_edited.pdf" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-secondary">
+                            <i class="fa-solid fa-file-pdf"></i>
+                            <span>View / Download CV</span>
                         </a>
                         <a href="#contact" class="btn btn-outline">
-                            <i class="fa-solid fa-paper-plane"></i> Contact Me
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>Contact Me</span>
                         </a>
                     </div>
-                    
-                    <div class="hero-quick-tags">
-                        <span class="tag-title">Focus Areas:</span>
-                        <span class="tag"><i class="fa-brands fa-html5"></i> Web Dev</span>
-                        <span class="tag"><i class="fa-solid fa-database"></i> DBMS</span>
-                        <span class="tag"><i class="fa-solid fa-diagram-project"></i> SAD & UML</span>
-                        <span class="tag"><i class="fa-solid fa-cubes"></i> 3D & Design</span>
+
+                    <div class="hero-focus-tags">
+                        <span class="tags-label">Focus Areas:</span>
+                        <div class="tags-wrapper">
+                            <span class="focus-tag"><i class="fa-solid fa-palette"></i> UI/UX Design</span>
+                            <span class="focus-tag"><i class="fa-brands fa-html5"></i> Web Development</span>
+                            <span class="focus-tag"><i class="fa-brands fa-java"></i> Java</span>
+                            <span class="focus-tag"><i class="fa-solid fa-code"></i> C#</span>
+                            <span class="focus-tag"><i class="fa-solid fa-database"></i> Database Management</span>
+                            <span class="focus-tag"><i class="fa-brands fa-figma"></i> Figma</span>
+                        </div>
                     </div>
                 </div>
-                
+
                 <div class="hero-visual">
-                    <div class="avatar-card glass-card">
-                        <div class="avatar-wrapper">
-                            <img src="assets/avatar.png" alt="J.A. Yehani Prabodhya Profile" class="avatar-img">
-                            <div class="avatar-glow"></div>
-                        </div>
-                        <div class="hero-stats">
-                            <div class="stat-item">
-                                <span class="stat-num" data-count="3">3+</span>
-                                <span class="stat-label">Core Projects</span>
-                            </div>
-                            <div class="stat-divider"></div>
-                            <div class="stat-item">
-                                <span class="stat-num">BICT</span>
-                                <span class="stat-label">Degree Underway</span>
-                            </div>
+                    <div class="profile-card-wrapper">
+                        <div class="profile-glow-ring"></div>
+                        <div class="profile-image-container standalone-avatar">
+                            <div class="profile-spin-ring"></div>
+                            <div class="orbit-dot dot-1"></div>
+                            <div class="orbit-dot dot-2"></div>
+                            <div class="orbit-dot dot-3"></div>
+                            <img src="assets/avatar.jpg" alt="J.A. Yehani Prabodhya Nawarathna Profile Photograph"
+                                class="profile-img" loading="eager">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 2. ABOUT ME SECTION -->
-        <section id="about" class="about-section section-padding">
+        <!-- 2. ABOUT ME -->
+        <section id="about" class="section-padding alt-bg">
             <div class="container">
-                <div class="section-header">
+                <div class="section-header center">
                     <span class="section-subtitle">Get To Know Me</span>
                     <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
-                    <div class="section-line"></div>
+                    <div class="title-underline"></div>
                 </div>
-                
+
                 <div class="about-grid">
+                    <!-- CARD 1: MY JOURNEY -->
                     <div class="about-card glass-card">
-                        <div class="about-icon-header">
-                            <i class="fa-solid fa-user-graduate"></i>
+                        <div class="card-icon-header">
+                            <div class="icon-box primary">
+                                <i class="fa-solid fa-compass"></i>
+                            </div>
                             <h3>My Journey</h3>
                         </div>
-                        <p class="about-text">
-                            I am a motivated and enthusiastic ICT undergraduate with a strong interest in technology and software development. I enjoy creating websites and learning how different technologies can be used to develop useful and user-friendly digital solutions.
-                        </p>
-                        <p class="about-text">
-                            I am particularly interested in web development and enjoy working with HTML, CSS, and JavaScript. I also have an interest in creative technologies and digital design.
-                        </p>
-                        <p class="about-text">
-                            I am always willing to learn new technologies, improve my existing skills, and take on new challenges. My goal is to develop myself as a professional in the IT field and contribute to meaningful technology projects.
-                        </p>
-                    </div>
-                    
-                    <div class="objective-card glass-card highlight-card">
-                        <div class="objective-badge">
-                            <i class="fa-solid fa-bullseye"></i> Career Goal
+                        <div class="about-text">
+                            <p>
+                                My journey into the world of technology began with my studies in the Technology stream,
+                                where I developed an interest in Information and Communication Technology. After
+                                successfully completing my G.C.E. Advanced Level examination in 2022, I decided to
+                                continue my education in the field of ICT.
+                            </p>
+                            <p>
+                                I am currently pursuing a Bachelor of Information and Communication Technology (Honours)
+                                at the University of Vavuniya. During my university journey, I have gained knowledge and
+                                practical experience in programming, web development, database management, and computer
+                                graphics.
+                            </p>
+                            <p>
+                                Along the way, I discovered my passion for UI/UX design and web development. I enjoy
+                                creating simple, modern, and user-friendly interfaces and turning creative ideas into
+                                functional digital experiences.
+                            </p>
+                            <p class="journey-highlight">
+                                My journey is still continuing, and I am constantly learning new technologies, improving
+                                my skills, and working towards becoming a skilled UI/UX Designer and Web Developer.
+                            </p>
                         </div>
-                        <h3>Career Objective</h3>
-                        <p class="objective-text">
-                            My career objective is to become a skilled IT professional with strong knowledge of web development and software design. I aim to gain practical industry experience, improve my technical and problem-solving abilities, and develop innovative and user-friendly digital solutions.
-                        </p>
-                        <div class="objective-highlights">
-                            <div class="obj-item">
-                                <i class="fa-solid fa-check-circle"></i>
-                                <span>Industry Experience & Growth</span>
+                    </div>
+
+                    <!-- CARD 2: CAREER OBJECTIVE -->
+                    <div class="about-card glass-card">
+                        <div class="card-icon-header">
+                            <div class="icon-box accent">
+                                <i class="fa-solid fa-bullseye"></i>
                             </div>
-                            <div class="obj-item">
-                                <i class="fa-solid fa-check-circle"></i>
-                                <span>Web Development Mastery</span>
+                            <h3>Career Objective</h3>
+                        </div>
+                        <div class="about-text">
+                            <p>
+                                My career goal is to become a skilled UI/UX Designer and Web Developer who creates
+                                meaningful, user-friendly, and innovative digital experiences.
+                            </p>
+                            <p>
+                                I aim to continuously improve my design and technical skills, learn new technologies,
+                                and gain real-world industry experience.
+                            </p>
+                            <p>
+                                In the future, I hope to contribute to impactful projects and grow into a professional
+                                who combines creativity, technology, and problem-solving to build better digital
+                                solutions.
+                            </p>
+                        </div>
+
+                        <div class="career-goals-box">
+                            <h4 class="goals-title"><i class="fa-solid fa-star"></i> Key Focus Goals</h4>
+                            <ul class="career-goals-list">
+                                <li>
+                                    <div class="goal-icon"><i class="fa-solid fa-briefcase"></i></div>
+                                    <span>Gain Real-World Industry Experience</span>
+                                </li>
+                                <li>
+                                    <div class="goal-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                                    <span>Improve UI/UX &amp; Development Skills</span>
+                                </li>
+                                <li>
+                                    <div class="goal-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                                    <span>Build Meaningful Digital Solutions</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. EDUCATION -->
+        <section id="education" class="section-padding">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="section-subtitle">Academic Background</span>
+                    <h2 class="section-title">Education <span class="gradient-text">Timeline</span></h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="education-layout">
+                    <!-- MAIN DEGREE HIGHLIGHT -->
+                    <div class="degree-main-card glass-card">
+                        <div class="degree-badge">Current Academic Pursuit</div>
+                        <div class="degree-header">
+                            <div class="degree-icon">
+                                <i class="fa-solid fa-graduation-cap"></i>
                             </div>
-                            <div class="obj-item">
-                                <i class="fa-solid fa-check-circle"></i>
-                                <span>Innovative Digital Solutions</span>
+                            <div class="degree-titles">
+                                <h3>Bachelor of Information and Communication Technology (Honours)</h3>
+                                <p class="uni-name">University of Vavuniya</p>
+                                <p class="faculty-name"><i class="fa-solid fa-building-columns"></i> Faculty of
+                                    Technological Studies</p>
+                            </div>
+                        </div>
+
+                        <div class="degree-meta">
+                            <div class="meta-item">
+                                <i class="fa-regular fa-calendar"></i>
+                                <span>Period: <strong>2024 – Present</strong></span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fa-solid fa-user-graduate"></i>
+                                <span>Status: <strong class="badge-status">Undergraduate</strong></span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span>Location: <strong>Vavuniya, Sri Lanka</strong></span>
+                            </div>
+                        </div>
+
+                        <div class="learning-areas-container">
+                            <h4><i class="fa-solid fa-book-open"></i> Relevant University Learning Areas:</h4>
+                            <div class="learning-grid">
+                                <div class="learning-item"><i class="fa-solid fa-diagram-project"></i> System Analysis
+                                    and Design</div>
+                                <div class="learning-item"><i class="fa-solid fa-database"></i> Database Management
+                                    Systems</div>
+                                <div class="learning-item"><i class="fa-solid fa-network-wired"></i> Computer Networks
+                                </div>
+                                <div class="learning-item"><i class="fa-solid fa-code"></i> Programming (Java &amp; C#)
+                                </div>
+                                <div class="learning-item"><i class="fa-solid fa-cubes"></i> Computer Graphics</div>
+                                <div class="learning-item"><i class="fa-solid fa-chart-line"></i> Operations Research
+                                </div>
+                                <div class="learning-item"><i class="fa-brands fa-html5"></i> Web Development</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PREVIOUS EDUCATION TIMELINE -->
+                    <div class="previous-education-timeline">
+                        <h3 class="timeline-heading"><i class="fa-solid fa-clock-rotate-left"></i> Previous Academic
+                            Qualifications</h3>
+
+                        <div class="timeline-items">
+                            <!-- AL Item -->
+                            <div class="timeline-card glass-card">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-header">
+                                    <h4>G.C.E. Advanced Level Examination</h4>
+                                    <span class="timeline-year">2022</span>
+                                </div>
+                                <p class="timeline-stream"><i class="fa-solid fa-microchip"></i> Technology Stream</p>
+                                <p class="timeline-desc">Successfully completed Advanced Level studies specializing in
+                                    Information &amp; Communication Technology, establishing a strong technical
+                                    foundation.</p>
+                            </div>
+
+                            <!-- OL Item -->
+                            <div class="timeline-card glass-card">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-header">
+                                    <h4>G.C.E. Ordinary Level Examination</h4>
+                                    <span class="timeline-year">2019</span>
+                                </div>
+                                <p class="timeline-stream"><i class="fa-solid fa-school"></i> Secondary Education</p>
+                                <p class="timeline-desc">Successfully completed Ordinary Level examinations with high
+                                    performance across all core subjects.</p>
                             </div>
                         </div>
                     </div>
@@ -176,400 +349,378 @@
             </div>
         </section>
 
-        <!-- 3. EDUCATION SECTION -->
-        <section id="education" class="education-section section-padding alt-bg">
+        <!-- 4. SKILLS -->
+        <section id="skills" class="section-padding alt-bg">
             <div class="container">
-                <div class="section-header">
-                    <span class="section-subtitle">Academic Background</span>
-                    <h2 class="section-title">My <span class="gradient-text">Education</span></h2>
-                    <div class="section-line"></div>
+                <div class="section-header center">
+                    <span class="section-subtitle">Capabilities &amp; Tools</span>
+                    <h2 class="section-title">Skills &amp; <span class="gradient-text">Proficiencies</span></h2>
+                    <div class="title-underline"></div>
                 </div>
-                
-                <div class="education-container">
-                    <div class="edu-main-card glass-card">
-                        <div class="edu-header">
-                            <div class="edu-icon">
+
+                <!-- SKILL CATEGORIES -->
+                <div class="skills-wrapper">
+                    <div class="skills-group-title">
+                        <i class="fa-solid fa-laptop-code"></i>
+                        <h3>Technical Skills</h3>
+                    </div>
+
+                    <div class="skills-grid">
+                        <!-- WEB DEVELOPMENT -->
+                        <div class="skill-card glass-card">
+                            <div class="skill-header">
+                                <div class="skill-icon-badge web">
+                                    <i class="fa-solid fa-code"></i>
+                                </div>
+                                <h4>Web Development</h4>
+                            </div>
+                            <div class="skill-pills">
+                                <div class="skill-pill"><span class="pill-name">HTML5</span> <span
+                                        class="pill-level proficient">Proficient</span></div>
+                                <div class="skill-pill"><span class="pill-name">CSS3</span> <span
+                                        class="pill-level proficient">Proficient</span></div>
+                                <div class="skill-pill"><span class="pill-name">JavaScript</span> <span
+                                        class="pill-level intermediate">Intermediate</span></div>
+                            </div>
+                        </div>
+
+                        <!-- PROGRAMMING -->
+                        <div class="skill-card glass-card">
+                            <div class="skill-header">
+                                <div class="skill-icon-badge prog">
+                                    <i class="fa-solid fa-terminal"></i>
+                                </div>
+                                <h4>Programming</h4>
+                            </div>
+                            <div class="skill-pills">
+                                <div class="skill-pill"><span class="pill-name">Java</span> <span
+                                        class="pill-level intermediate">Intermediate</span></div>
+                                <div class="skill-pill"><span class="pill-name">C#</span> <span
+                                        class="pill-level intermediate">Intermediate</span></div>
+                            </div>
+                        </div>
+
+                        <!-- DATABASE -->
+                        <div class="skill-card glass-card">
+                            <div class="skill-header">
+                                <div class="skill-icon-badge db">
+                                    <i class="fa-solid fa-database"></i>
+                                </div>
+                                <h4>Database Management</h4>
+                            </div>
+                            <div class="skill-pills">
+                                <div class="skill-pill"><span class="pill-name">SQL</span> <span
+                                        class="pill-level proficient">Proficient</span></div>
+                                <div class="skill-pill"><span class="pill-name">Database Management</span> <span
+                                        class="pill-level intermediate">Intermediate</span></div>
+                                <div class="skill-pill"><span class="pill-name">ER Diagrams</span> <span
+                                        class="pill-level proficient">Proficient</span></div>
+                            </div>
+                        </div>
+
+                        <!-- UI/UX DESIGN -->
+                        <div class="skill-card glass-card">
+                            <div class="skill-header">
+                                <div class="skill-icon-badge uiux">
+                                    <i class="fa-solid fa-bezier-curve"></i>
+                                </div>
+                                <h4>UI/UX Design</h4>
+                            </div>
+                            <div class="skill-pills">
+                                <div class="skill-pill"><span class="pill-name">User Interface Design</span> <span
+                                        class="pill-level proficient">Proficient</span></div>
+                                <div class="skill-pill"><span class="pill-name">User Experience</span> <span
+                                        class="pill-level intermediate">Intermediate</span></div>
+                                <div class="skill-pill"><span class="pill-name">Wireframing</span> <span
+                                        class="pill-level proficient">Proficient</span></div>
+                                <div class="skill-pill"><span class="pill-name">Prototyping</span> <span
+                                        class="pill-level intermediate">Intermediate</span></div>
+                                <div class="skill-pill"><span class="pill-name">Figma</span> <span
+                                        class="pill-level proficient">Proficient</span></div>
+                            </div>
+                        </div>
+
+                        <!-- SYSTEM ANALYSIS & DESIGN -->
+                        <div class="skill-card glass-card">
+                            <div class="skill-header">
+                                <div class="skill-icon-badge sad">
+                                    <i class="fa-solid fa-sitemap"></i>
+                                </div>
+                                <h4>System Analysis &amp; Design</h4>
+                            </div>
+                            <div class="skill-pills">
+                                <div class="skill-pill"><span class="pill-name">UML Modeling</span> <span
+                                        class="pill-level proficient">Proficient</span></div>
+                                <div class="skill-pill"><span class="pill-name">Use Case Diagrams</span> <span
+                                        class="pill-level proficient">Proficient</span></div>
+                                <div class="skill-pill"><span class="pill-name">Activity Diagrams</span> <span
+                                        class="pill-level intermediate">Intermediate</span></div>
+                                <div class="skill-pill"><span class="pill-name">Data Flow Diagrams</span> <span
+                                        class="pill-level intermediate">Intermediate</span></div>
+                                <div class="skill-pill"><span class="pill-name">Requirements Analysis</span> <span
+                                        class="pill-level proficient">Proficient</span></div>
+                            </div>
+                        </div>
+
+                        <!-- TOOLS -->
+                        <div class="skill-card glass-card">
+                            <div class="skill-header">
+                                <div class="skill-icon-badge tools">
+                                    <i class="fa-solid fa-wrench"></i>
+                                </div>
+                                <h4>Development Tools</h4>
+                            </div>
+                            <div class="skill-pills">
+                                <div class="skill-pill"><span class="pill-name">Git</span> <span
+                                        class="pill-level intermediate">Intermediate</span></div>
+                                <div class="skill-pill"><span class="pill-name">GitHub</span> <span
+                                        class="pill-level intermediate">Intermediate</span></div>
+                                <div class="skill-pill"><span class="pill-name">Figma</span> <span
+                                        class="pill-level proficient">Proficient</span></div>
+                                <div class="skill-pill"><span class="pill-name">Basic Design Tools</span> <span
+                                        class="pill-level intermediate">Intermediate</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SOFT SKILLS -->
+                    <div class="skills-group-title soft-title">
+                        <i class="fa-solid fa-users-gear"></i>
+                        <h3>Soft Skills</h3>
+                    </div>
+
+                    <div class="soft-skills-grid">
+                        <div class="soft-skill-chip"><i class="fa-solid fa-comments"></i> Communication</div>
+                        <div class="soft-skill-chip"><i class="fa-solid fa-people-group"></i> Teamwork</div>
+                        <div class="soft-skill-chip"><i class="fa-solid fa-puzzle-piece"></i> Problem Solving</div>
+                        <div class="soft-skill-chip"><i class="fa-solid fa-lightbulb"></i> Creativity</div>
+                        <div class="soft-skill-chip"><i class="fa-solid fa-clock"></i> Time Management</div>
+                        <div class="soft-skill-chip"><i class="fa-solid fa-arrows-spin"></i> Adaptability</div>
+                        <div class="soft-skill-chip"><i class="fa-solid fa-bolt"></i> Quick Learning</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. FEATURED PROJECTS -->
+        <section id="projects" class="section-padding">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="section-subtitle">Portfolio Showcase</span>
+                    <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="projects-grid">
+
+                    <!-- PROJECT 01: LKmart -->
+                    <article class="project-card glass-card">
+                        <div class="project-img-wrapper">
+                            <img src="assets/portfolio_preview.png"
+                                alt="LKmart Mobile Accessories Shop UI UX Design Preview" class="project-img"
+                                loading="lazy">
+                            <div class="project-overlay">
+                                <span class="project-category-badge"><i class="fa-solid fa-palette"></i> UI/UX
+                                    Design</span>
+                            </div>
+                        </div>
+
+                        <div class="project-content">
+                            <span class="project-number">PROJECT 01</span>
+                            <h3 class="project-title">LKmart – Mobile Accessories Shop</h3>
+
+                            <p class="project-desc">
+                                LKmart is a UI/UX design project for a modern mobile accessories shopping platform. The
+                                design focuses on creating a simple, attractive, and user-friendly shopping experience
+                                where customers can easily browse, explore, and purchase mobile accessories.
+                            </p>
+
+                            <div class="project-meta-info">
+                                <div class="meta-row"><strong>Role:</strong> UI/UX Designer</div>
+                                <div class="meta-row"><strong>Tool:</strong> Figma</div>
+                                <div class="meta-row"><strong>Focus:</strong> User Interface, Prototyping, Wireframing
+                                </div>
+                            </div>
+
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">Figma</span>
+                                <span class="tech-tag">UI Design</span>
+                                <span class="tech-tag">UX Research</span>
+                                <span class="tech-tag">Wireframing</span>
+                                <span class="tech-tag">Prototyping</span>
+                            </div>
+
+                            <button class="btn btn-primary modal-trigger" data-modal="modal-project-1">
+                                <span>View Project Details</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 02: Supermarket Management System -->
+                    <article class="project-card glass-card">
+                        <div class="project-img-wrapper">
+                            <img src="assets/pos_preview.png"
+                                alt="Supermarket Management System Java Application Preview" class="project-img"
+                                loading="lazy">
+                            <div class="project-overlay">
+                                <span class="project-category-badge java-badge"><i class="fa-brands fa-java"></i> Java
+                                    Application</span>
+                            </div>
+                        </div>
+
+                        <div class="project-content">
+                            <span class="project-number">PROJECT 02</span>
+                            <h3 class="project-title">Supermarket Management System</h3>
+
+                            <p class="project-desc">
+                                A Java-based application designed to simplify and manage common supermarket operations,
+                                customer transactions, product stock management, and automatic bill calculations
+                                efficiently.
+                            </p>
+
+                            <div class="project-meta-info">
+                                <div class="meta-row"><strong>Role:</strong> Java Developer</div>
+                                <div class="meta-row"><strong>Technology:</strong> Java</div>
+                                <div class="meta-row"><strong>Focus:</strong> OOP, App Development, Problem Solving
+                                </div>
+                            </div>
+
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">OOP</span>
+                                <span class="tech-tag">Swing / UI</span>
+                                <span class="tech-tag">Stock Management</span>
+                            </div>
+
+                            <button class="btn btn-primary modal-trigger" data-modal="modal-project-2">
+                                <span>View Project Details</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 03: University Event Management System -->
+                    <article class="project-card glass-card">
+                        <div class="project-img-wrapper">
+                            <img src="assets/bakery_db_preview.png"
+                                alt="University Event Management System C# Application Preview" class="project-img"
+                                loading="lazy">
+                            <div class="project-overlay">
+                                <span class="project-category-badge cs-badge"><i class="fa-solid fa-code"></i> C#
+                                    Application</span>
+                            </div>
+                        </div>
+
+                        <div class="project-content">
+                            <span class="project-number">PROJECT 03</span>
+                            <h3 class="project-title">University Event Management System</h3>
+
+                            <p class="project-desc">
+                                A C#-based software solution created to streamline university event scheduling,
+                                participant registration, organizer coordination, and database integration through an
+                                intuitive desktop interface.
+                            </p>
+
+                            <div class="project-meta-info">
+                                <div class="meta-row"><strong>Role:</strong> C# Developer</div>
+                                <div class="meta-row"><strong>Technology:</strong> C# &amp; Database</div>
+                                <div class="meta-row"><strong>Focus:</strong> Database Integration, UI Design, Logic
+                                </div>
+                            </div>
+
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">C#</span>
+                                <span class="tech-tag">Database Integration</span>
+                                <span class="tech-tag">UI Design</span>
+                                <span class="tech-tag">Event Planning</span>
+                            </div>
+
+                            <button class="btn btn-primary modal-trigger" data-modal="modal-project-3">
+                                <span>View Project Details</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. EXPERIENCE & ACTIVITIES -->
+        <section id="experience" class="section-padding alt-bg">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="section-subtitle">Work &amp; Involvement</span>
+                    <h2 class="section-title">Experience &amp; <span class="gradient-text">Activities</span></h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="exp-activities-grid">
+                    <!-- EXPERIENCE CARD 01 -->
+                    <div class="exp-card glass-card">
+                        <div class="exp-header">
+                            <div class="exp-icon-box">
                                 <i class="fa-solid fa-building-columns"></i>
                             </div>
-                            <div class="edu-title-group">
-                                <span class="status-badge"><i class="fa-solid fa-spinner fa-spin"></i> Current Status: Undergraduate</span>
-                                <h3>Bachelor of Information and Communication Technology</h3>
-                                <h4>University of Vavuniya</h4>
-                                <p class="faculty-info"><i class="fa-solid fa-graduation-cap"></i> Faculty of Technological Studies | Department of ICT</p>
+                            <div class="exp-title-meta">
+                                <span class="exp-label">EXPERIENCE 01</span>
+                                <h3>Bank Teller Intern</h3>
+                                <p class="company-name"><i class="fa-solid fa-landmark"></i> People's Bank – Dambadeniya
+                                    Branch</p>
+                                <span class="exp-period"><i class="fa-regular fa-calendar"></i> January 2024 – July
+                                    2024</span>
                             </div>
                         </div>
-                        
-                        <div class="edu-body-grid">
-                            <!-- Relevant Coursework -->
-                            <div class="coursework-box">
-                                <h4 class="box-title"><i class="fa-solid fa-book-open"></i> Relevant Coursework</h4>
-                                <ul class="course-list">
-                                    <li><i class="fa-solid fa-diagram-project"></i> System Analysis and Design</li>
-                                    <li><i class="fa-solid fa-database"></i> Database Management Systems</li>
-                                    <li><i class="fa-solid fa-network-wired"></i> Computer Networks</li>
-                                    <li><i class="fa-solid fa-chart-line"></i> Operations Research</li>
-                                    <li><i class="fa-solid fa-desktop"></i> Computer Graphics</li>
-                                    <li><i class="fa-solid fa-calculator"></i> Accounting</li>
-                                </ul>
-                            </div>
-                            
-                            <!-- Academic Highlights -->
-                            <div class="highlights-box">
-                                <h4 class="box-title"><i class="fa-solid fa-star"></i> Academic Highlights</h4>
-                                <ul class="highlight-list">
-                                    <li><i class="fa-solid fa-circle-check"></i> Developing practical web development skills</li>
-                                    <li><i class="fa-solid fa-circle-check"></i> Learning database design and SQL</li>
-                                    <li><i class="fa-solid fa-circle-check"></i> Studying system analysis and design</li>
-                                    <li><i class="fa-solid fa-circle-check"></i> Developing programming and problem-solving skills</li>
-                                    <li><i class="fa-solid fa-circle-check"></i> Working on academic projects and practical assignments</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- 4. SKILLS SECTION -->
-        <section id="skills" class="skills-section section-padding">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-subtitle">Technical & Interpersonal Abilities</span>
-                    <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
-                    <div class="section-line"></div>
-                </div>
-                
-                <!-- Category 1: Technical Skills -->
-                <div class="skills-category-title">
-                    <i class="fa-solid fa-laptop-code"></i> Technical Skills
-                </div>
-                
-                <div class="skills-grid">
-                    <!-- Web Development -->
-                    <div class="skill-card glass-card">
-                        <div class="skill-card-header">
-                            <i class="fa-brands fa-code-compare skill-cat-icon"></i>
-                            <h3>Web Development</h3>
-                        </div>
-                        <div class="skill-items">
-                            <div class="skill-bar-item">
-                                <div class="skill-info">
-                                    <span><i class="fa-brands fa-html5 text-orange"></i> HTML5</span>
-                                    <span class="skill-pct">Advanced</span>
-                                </div>
-                                <div class="progress-line"><span style="width: 90%;"></span></div>
-                            </div>
-                            <div class="skill-bar-item">
-                                <div class="skill-info">
-                                    <span><i class="fa-brands fa-css3-alt text-blue"></i> CSS3</span>
-                                    <span class="skill-pct">Intermediate</span>
-                                </div>
-                                <div class="progress-line"><span style="width: 85%;"></span></div>
-                            </div>
-                            <div class="skill-bar-item">
-                                <div class="skill-info">
-                                    <span><i class="fa-brands fa-js text-yellow"></i> JavaScript</span>
-                                    <span class="skill-pct">Intermediate</span>
-                                </div>
-                                <div class="progress-line"><span style="width: 75%;"></span></div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Database -->
-                    <div class="skill-card glass-card">
-                        <div class="skill-card-header">
-                            <i class="fa-solid fa-database skill-cat-icon"></i>
-                            <h3>Database Management</h3>
-                        </div>
-                        <div class="skill-items">
-                            <div class="skill-bar-item">
-                                <div class="skill-info">
-                                    <span><i class="fa-solid fa-terminal text-green"></i> SQL</span>
-                                    <span class="skill-pct">Intermediate</span>
-                                </div>
-                                <div class="progress-line"><span style="width: 80%;"></span></div>
-                            </div>
-                            <div class="skill-bar-item">
-                                <div class="skill-info">
-                                    <span><i class="fa-solid fa-sitemap text-purple"></i> Database Design</span>
-                                    <span class="skill-pct">Intermediate</span>
-                                </div>
-                                <div class="progress-line"><span style="width: 82%;"></span></div>
-                            </div>
-                            <div class="skill-bar-item">
-                                <div class="skill-info">
-                                    <span><i class="fa-solid fa-diagram-next text-pink"></i> ER Diagrams</span>
-                                    <span class="skill-pct">Proficient</span>
-                                </div>
-                                <div class="progress-line"><span style="width: 85%;"></span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- System Analysis & Design -->
-                    <div class="skill-card glass-card">
-                        <div class="skill-card-header">
-                            <i class="fa-solid fa-diagram-project skill-cat-icon"></i>
-                            <h3>System Analysis & Design</h3>
-                        </div>
-                        <div class="skill-chips">
-                            <span class="chip"><i class="fa-solid fa-circle-nodes"></i> UML</span>
-                            <span class="chip"><i class="fa-solid fa-user-gear"></i> Use Case Diagrams</span>
-                            <span class="chip"><i class="fa-solid fa-route"></i> Activity Diagrams</span>
-                            <span class="chip"><i class="fa-solid fa-arrows-split-up-and-left"></i> Data Flow Diagrams (DFD)</span>
-                            <span class="chip"><i class="fa-solid fa-clipboard-check"></i> Requirements Analysis</span>
-                        </div>
-                    </div>
-
-                    <!-- Creative & Other -->
-                    <div class="skill-card glass-card">
-                        <div class="skill-card-header">
-                            <i class="fa-solid fa-wand-magic-sparkles skill-cat-icon"></i>
-                            <h3>Creative & Other Tools</h3>
-                        </div>
-                        <div class="skill-chips">
-                            <span class="chip"><i class="fa-solid fa-cube"></i> Blender 3D</span>
-                            <span class="chip"><i class="fa-solid fa-palette"></i> Basic UI Design</span>
-                            <span class="chip"><i class="fa-brands fa-git-alt"></i> Git</span>
-                            <span class="chip"><i class="fa-brands fa-github"></i> GitHub</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Category 2: Soft Skills -->
-                <div class="skills-category-title mt-5">
-                    <i class="fa-solid fa-heart-pulse"></i> Soft Skills
-                </div>
-                
-                <div class="soft-skills-grid">
-                    <div class="soft-skill-badge glass-card">
-                        <i class="fa-solid fa-comments"></i>
-                        <span>Communication</span>
-                    </div>
-                    <div class="soft-skill-badge glass-card">
-                        <i class="fa-solid fa-people-group"></i>
-                        <span>Teamwork</span>
-                    </div>
-                    <div class="soft-skill-badge glass-card">
-                        <i class="fa-solid fa-brain"></i>
-                        <span>Problem Solving</span>
-                    </div>
-                    <div class="soft-skill-badge glass-card">
-                        <i class="fa-solid fa-lightbulb"></i>
-                        <span>Creativity</span>
-                    </div>
-                    <div class="soft-skill-badge glass-card">
-                        <i class="fa-solid fa-clock"></i>
-                        <span>Time Management</span>
-                    </div>
-                    <div class="soft-skill-badge glass-card">
-                        <i class="fa-solid fa-sliders"></i>
-                        <span>Adaptability</span>
-                    </div>
-                    <div class="soft-skill-badge glass-card">
-                        <i class="fa-solid fa-bolt"></i>
-                        <span>Quick Learning</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 5. PROJECTS SECTION -->
-        <section id="projects" class="projects-section section-padding alt-bg">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-subtitle">Practical Work & Assignments</span>
-                    <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
-                    <div class="section-line"></div>
-                </div>
-                
-                <div class="projects-grid">
-                    <!-- Project 01 -->
-                    <article class="project-card glass-card">
-                        <div class="project-img-wrapper">
-                            <img src="assets/portfolio_preview.png" alt="Personal Portfolio Website Preview" class="project-img">
-                            <div class="project-badge">Project 01</div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Personal Portfolio Website</h3>
-                            <p class="project-desc">
-                                A responsive personal portfolio website developed to present my education, skills, projects, career objectives, and contact information in a professional way.
+                        <div class="exp-body">
+                            <p>
+                                Worked as a Bank Teller intern and gained practical experience in a professional working
+                                environment, customer communication, teamwork, responsibility, accuracy, and time
+                                management.
                             </p>
-                            
-                            <div class="project-tech-tags">
-                                <span class="tech-tag">HTML5</span>
-                                <span class="tech-tag">CSS3</span>
-                                <span class="tech-tag">JavaScript</span>
-                            </div>
-                            
-                            <div class="project-details-block">
-                                <h4><i class="fa-solid fa-user-check"></i> My Contribution:</h4>
-                                <ul>
-                                    <li>Designed the website structure</li>
-                                    <li>Developed the web pages</li>
-                                    <li>Created the user interface</li>
-                                    <li>Added responsive design</li>
-                                    <li>Added JavaScript functionality</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="project-learned">
-                                <p><strong><i class="fa-solid fa-lightbulb"></i> What I Learned:</strong> This project helped me improve my web development, user interface design, responsive design, and problem-solving skills.</p>
-                            </div>
-                            
-                            <button class="btn btn-secondary btn-block modal-trigger" data-modal="modal-p1">
-                                <i class="fa-solid fa-expand"></i> View Full Details
-                            </button>
-                        </div>
-                    </article>
 
-                    <!-- Project 02 -->
-                    <article class="project-card glass-card">
-                        <div class="project-img-wrapper">
-                            <img src="assets/pos_preview.png" alt="Supermarket POS System Preview" class="project-img">
-                            <div class="project-badge">Project 02</div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Supermarket POS System</h3>
-                            <p class="project-desc">
-                                A proposed Point of Sale system designed to help a supermarket manage sales, products, customers, and stock efficiently.
-                            </p>
-                            
-                            <div class="project-features-chips">
-                                <span class="feat-chip"><i class="fa-solid fa-box"></i> Product Mgmt</span>
-                                <span class="feat-chip"><i class="fa-solid fa-cash-register"></i> Sales Mgmt</span>
-                                <span class="feat-chip"><i class="fa-solid fa-warehouse"></i> Stock Mgmt</span>
-                                <span class="feat-chip"><i class="fa-solid fa-users"></i> Customer Mgmt</span>
-                                <span class="feat-chip"><i class="fa-solid fa-receipt"></i> Bill Generation</span>
+                            <div class="exp-skills-gained">
+                                <span class="exp-skill-chip"><i class="fa-solid fa-check"></i> Customer
+                                    Communication</span>
+                                <span class="exp-skill-chip"><i class="fa-solid fa-check"></i> Accuracy &amp;
+                                    Responsibility</span>
+                                <span class="exp-skill-chip"><i class="fa-solid fa-check"></i> Teamwork &amp;
+                                    Adaptability</span>
+                                <span class="exp-skill-chip"><i class="fa-solid fa-check"></i> Time Management</span>
                             </div>
-                            
-                            <div class="project-tech-tags">
-                                <span class="tech-tag">HTML</span>
-                                <span class="tech-tag">CSS</span>
-                                <span class="tech-tag">JavaScript</span>
-                                <span class="tech-tag">Database</span>
-                            </div>
-                            
-                            <div class="project-details-block">
-                                <h4><i class="fa-solid fa-user-check"></i> My Contribution:</h4>
-                                <ul>
-                                    <li>Worked on planning the system features</li>
-                                    <li>Designed a simple and user-friendly interface</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="project-learned">
-                                <p><strong><i class="fa-solid fa-lightbulb"></i> What I Learned:</strong> This project helped me understand how software systems can be designed to solve real-world business problems.</p>
-                            </div>
-                            
-                            <button class="btn btn-secondary btn-block modal-trigger" data-modal="modal-p2">
-                                <i class="fa-solid fa-expand"></i> View Full Details
-                            </button>
-                        </div>
-                    </article>
-
-                    <!-- Project 03 -->
-                    <article class="project-card glass-card">
-                        <div class="project-img-wrapper">
-                            <img src="assets/bakery_db_preview.png" alt="Bakery Database Management System Preview" class="project-img">
-                            <div class="project-badge">Project 03</div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Bakery Database Management System</h3>
-                            <p class="project-desc">
-                                A database system designed to manage bakery product information, including product names, categories, prices, quantities, suppliers, manufacture dates, and expiry dates.
-                            </p>
-                            
-                            <div class="project-tech-tags">
-                                <span class="tech-tag">SQL</span>
-                                <span class="tech-tag">DBMS</span>
-                                <span class="tech-tag">ER Diagram</span>
-                            </div>
-                            
-                            <div class="project-details-block">
-                                <h4><i class="fa-solid fa-user-check"></i> My Contribution:</h4>
-                                <ul>
-                                    <li>Designed database tables</li>
-                                    <li>Identified attributes & entities</li>
-                                    <li>Created relationships</li>
-                                    <li>Added sample data</li>
-                                    <li>Created SQL queries</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="project-learned">
-                                <p><strong><i class="fa-solid fa-lightbulb"></i> What I Learned:</strong> This project improved my understanding of database design, SQL, relationships, and data management.</p>
-                            </div>
-                            
-                            <button class="btn btn-secondary btn-block modal-trigger" data-modal="modal-p3">
-                                <i class="fa-solid fa-expand"></i> View Full Details
-                            </button>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- 6. EXPERIENCE & ACTIVITIES SECTION -->
-        <section id="experience" class="experience-section section-padding">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-subtitle">Growth & Engagement</span>
-                    <h2 class="section-title">Experience & <span class="gradient-text">Activities</span></h2>
-                    <div class="section-line"></div>
-                </div>
-                
-                <div class="experience-grid">
-                    <!-- Academic Activities -->
-                    <div class="exp-card glass-card">
-                        <div class="exp-icon">
-                            <i class="fa-solid fa-laptop-code"></i>
-                        </div>
-                        <h3>Academic Activities</h3>
-                        <p>
-                            As an ICT undergraduate, I participate in academic projects and practical activities related to programming, web development, database management, system analysis, networking, and computer graphics.
-                        </p>
-                        <div class="exp-tags">
-                            <span>Programming</span>
-                            <span>Web Dev</span>
-                            <span>DBMS</span>
-                            <span>System Analysis</span>
-                            <span>Networks</span>
-                            <span>Graphics</span>
                         </div>
                     </div>
 
-                    <!-- Personal Learning -->
+                    <!-- ACTIVITY CARD 01 -->
                     <div class="exp-card glass-card">
-                        <div class="exp-icon">
-                            <i class="fa-solid fa-book-bookmark"></i>
+                        <div class="exp-header">
+                            <div class="exp-icon-box activity-icon">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+                            <div class="exp-title-meta">
+                                <span class="exp-label activity-label">ACTIVITY 01</span>
+                                <h3>Executive Committee Member</h3>
+                                <p class="company-name"><i class="fa-solid fa-graduation-cap"></i> Techmeetup Society
+                                </p>
+                                <p class="faculty-sub">Faculty of Technological Studies | University of Vavuniya</p>
+                            </div>
                         </div>
-                        <h3>Personal Learning</h3>
-                        <p>
-                            I regularly practise web development and explore new technologies to improve my technical knowledge. I am also interested in creative tools such as Blender and digital design.
-                        </p>
-                        <div class="exp-tags">
-                            <span>Self-Paced Practice</span>
-                            <span>Blender 3D</span>
-                            <span>UI Design</span>
-                            <span>Modern Web Standards</span>
-                        </div>
-                    </div>
 
-                    <!-- Future Career Development -->
-                    <div class="exp-card glass-card">
-                        <div class="exp-icon">
-                            <i class="fa-solid fa-rocket"></i>
-                        </div>
-                        <h3>Future Career Development</h3>
-                        <p>
-                            I am interested in gaining practical industry experience through internships and real-world projects. I hope to work with experienced professionals and apply my academic knowledge to practical situations.
-                        </p>
-                        <div class="exp-tags">
-                            <span>IT Internships</span>
-                            <span>Industry Mentorship</span>
-                            <span>Real-world Impact</span>
+                        <div class="exp-body">
+                            <p>
+                                Participated as an active member of the Executive Committee of the Techmeetup Society,
+                                contributing to university technology-related activities, event organization, peer
+                                engagement, and teamwork.
+                            </p>
+
+                            <div class="exp-skills-gained">
+                                <span class="exp-skill-chip"><i class="fa-solid fa-check"></i> Event Organization</span>
+                                <span class="exp-skill-chip"><i class="fa-solid fa-check"></i> Leadership &amp;
+                                    Coordination</span>
+                                <span class="exp-skill-chip"><i class="fa-solid fa-check"></i> Tech Community
+                                    Engagement</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -577,117 +728,254 @@
         </section>
 
         <!-- 7. CV SECTION -->
-        <section id="cv" class="cv-section section-padding alt-bg">
+        <section id="cv" class="section-padding">
             <div class="container">
-                <div class="section-header">
+                <div class="section-header center">
                     <span class="section-subtitle">Curriculum Vitae</span>
-                    <h2 class="section-title">Download My <span class="gradient-text">CV</span></h2>
-                    <div class="section-line"></div>
+                    <h2 class="section-title">My <span class="gradient-text">CV</span></h2>
+                    <div class="title-underline"></div>
                 </div>
-                
-                <div class="cv-card glass-card">
-                    <div class="cv-badge"><i class="fa-solid fa-file-pdf"></i> Verified PDF Format</div>
-                    
-                    <div class="cv-content-group">
-                        <h3>Curriculum Vitae Overview</h3>
+
+                <div class="cv-wrapper glass-card">
+                    <div class="cv-content-left">
+                        <div class="cv-badge"><i class="fa-solid fa-file-shield"></i> Verified Resume</div>
+                        <h3>Curriculum Vitae</h3>
                         <p class="cv-intro-text">
-                            My CV provides detailed information about my education, technical skills, projects, achievements, and career interests.
+                            My CV provides comprehensive details about my academic background, technical competencies,
+                            software projects, professional banking internship, and career objectives in UI/UX design
+                            and web development.
                         </p>
-                        <p class="cv-note">
-                            <i class="fa-solid fa-circle-info"></i> Your assignment requires an updated professional CV in PDF format. Click below to view and download the formatted PDF.
-                        </p>
-                        
-                        <div class="cv-actions">
-                            <button id="download-cv-btn" class="btn btn-primary btn-lg btn-glow">
-                                <i class="fa-solid fa-download"></i> Download CV (PDF)
+
+                        <div class="cv-features">
+                            <div class="cv-feature-item">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span>Complete Educational Background</span>
+                            </div>
+                            <div class="cv-feature-item">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span>Detailed Project Experience</span>
+                            </div>
+                            <div class="cv-feature-item">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span>Technical &amp; Soft Skills Overview</span>
+                            </div>
+                        </div>
+
+                        <div class="cv-action-buttons">
+                            <!-- VIEW CV: Opens actual PDF in a new tab -->
+                            <a href="Yehani_CV_edited.pdf" target="_blank" rel="noopener noreferrer"
+                                class="btn btn-primary" id="view-cv-link">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                <span>View CV (New Tab)</span>
+                            </a>
+
+                            <!-- DOWNLOAD CV: Downloads the actual PDF file -->
+                            <a href="Yehani_CV_edited.pdf" download="Yehani_CV_edited.pdf" class="btn btn-secondary"
+                                id="download-cv-link">
+                                <i class="fa-solid fa-download"></i>
+                                <span>Download CV</span>
+                            </a>
+
+                            <!-- INLINE PREVIEW MODAL TRIGGER -->
+                            <button class="btn btn-outline modal-trigger" data-modal="modal-cv-viewer">
+                                <i class="fa-solid fa-eye"></i>
+                                <span>Inline Preview</span>
                             </button>
-                            <button id="preview-cv-btn" class="btn btn-secondary btn-lg">
-                                <i class="fa-solid fa-eye"></i> Preview Interactive CV
-                            </button>
+                        </div>
+                    </div>
+
+                    <div class="cv-preview-right">
+                        <div class="pdf-preview-box">
+                            <div class="pdf-header-bar">
+                                <span class="pdf-dot red"></span>
+                                <span class="pdf-dot yellow"></span>
+                                <span class="pdf-dot green"></span>
+                                <span class="pdf-title-text">Yehani_CV_edited.pdf</span>
+                            </div>
+
+                            <div class="pdf-embed-wrapper">
+                                <iframe src="Yehani_CV_edited.pdf#toolbar=0" title="Yehani Prabodhya CV Preview"
+                                    class="pdf-iframe-preview" loading="lazy"></iframe>
+                            </div>
+
+                            <div class="pdf-card-footer">
+                                <span class="pdf-file-size"><i class="fa-solid fa-file-pdf"></i> Yehani_CV_edited.pdf
+                                    (275 KB)</span>
+                                <a href="Yehani_CV_edited.pdf" target="_blank" rel="noopener noreferrer"
+                                    class="btn-sm btn-outline">
+                                    <i class="fa-solid fa-up-right-from-square"></i> Open Fullscreen
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 8. CONTACT & LINKS SECTION -->
-        <section id="contact" class="contact-section section-padding">
+        <!-- 8. CONTACT -->
+        <section id="contact" class="section-padding alt-bg">
             <div class="container">
-                <div class="section-header">
+                <div class="section-header center">
                     <span class="section-subtitle">Get In Touch</span>
                     <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
-                    <div class="section-line"></div>
+                    <div class="title-underline"></div>
                 </div>
-                
-                <div class="contact-wrapper">
-                    <!-- Info Column -->
-                    <div class="contact-info-col glass-card">
-                        <h3>Contact Information</h3>
-                        <p class="contact-lead">
-                            I am always interested in learning, collaborating on projects, and exploring new opportunities in the field of technology. Feel free to connect with me through the platforms below.
-                        </p>
-                        
-                        <div class="info-icons-only">
-                            <a href="mailto:yehani.prabodhya@example.com" class="icon-contact-btn" title="Email: yehani.prabodhya@example.com" aria-label="Email">
+
+                <p class="contact-section-intro">
+                    I am always interested in learning, collaborating on projects, and exploring new opportunities in
+                    technology and design. Feel free to contact me for internships, projects, collaborations, or
+                    professional opportunities.
+                </p>
+
+                <div class="contact-grid">
+                    <!-- CONTACT CARDS & SOCIAL -->
+                    <div class="contact-info-col">
+                        <div class="contact-card glass-card">
+                            <div class="contact-icon">
                                 <i class="fa-solid fa-envelope"></i>
-                            </a>
-                            <a href="https://github.com/yehani-prabodhya" target="_blank" rel="noopener" class="icon-contact-btn" title="GitHub Profile" aria-label="GitHub">
-                                <i class="fa-brands fa-github"></i>
-                            </a>
-                            <a href="https://linkedin.com/in/yehani-prabodhya" target="_blank" rel="noopener" class="icon-contact-btn" title="LinkedIn Profile" aria-label="LinkedIn">
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email Me</h4>
+                                <a href="mailto:yehaninawarathna2003@gmail.com"
+                                    class="contact-link">yehaninawarathna2003@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-card glass-card">
+                            <div class="contact-icon">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Phone</h4>
+                                <a href="tel:0767344093" class="contact-link">076-7344093</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-card glass-card">
+                            <div class="contact-icon linkedin-card-icon">
                                 <i class="fa-brands fa-linkedin"></i>
-                            </a>
-                            <div class="icon-contact-btn" title="Location: Sri Lanka" aria-label="Location: Sri Lanka">
+                            </div>
+                            <div class="contact-details">
+                                <h4>LinkedIn</h4>
+                                <a href="https://www.linkedin.com/in/yehani-prabodhya-34624b344/" target="_blank"
+                                    rel="noopener noreferrer" class="contact-link">yehani-prabodhya-34624b344</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-card glass-card">
+                            <div class="contact-icon github-card-icon">
+                                <i class="fa-brands fa-github"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>GitHub</h4>
+                                <a href="https://github.com/yehaninawarathna2003-tech" target="_blank"
+                                    rel="noopener noreferrer" class="contact-link">yehaninawarathna2003-tech</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-card glass-card">
+                            <div class="contact-icon">
                                 <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Location</h4>
+                                <p class="contact-text">Sri Lanka</p>
+                            </div>
+                        </div>
+
+                        <!-- AVAILABILITY & RESPONSE TIME CARD -->
+                        <div class="availability-card glass-card">
+                            <div class="availability-header">
+                                <div class="pulse-indicator"></div>
+                                <h4>Internship &amp; Collaboration Status</h4>
+                            </div>
+                            <p class="availability-text">
+                                Currently open for ICT internships, UI/UX design opportunities, and web development projects.
+                            </p>
+                            <div class="response-time-tag">
+                                <i class="fa-solid fa-clock-rotate-left"></i>
+                                <span>Typical Response Time: <strong>Within 24 Hours</strong></span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Contact Form Column -->
-                    <div class="contact-form-col glass-card">
-                        <h3>Send Me a Message</h3>
-                        <form id="contact-form" class="contact-form">
-                            <div class="form-group">
-                                <label for="name">Your Name</label>
-                                <input type="text" id="name" name="name" required placeholder="Enter your full name">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="email">Your Email</label>
-                                <input type="email" id="email" name="email" required placeholder="name@example.com">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="subject">Subject</label>
-                                <input type="text" id="subject" name="subject" required placeholder="Project / Internship / Collaboration Inquiry">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea id="message" name="message" rows="5" required placeholder="Type your message here..."></textarea>
-                            </div>
-                            
-                            <button type="submit" class="btn btn-primary btn-block">
-                                <i class="fa-solid fa-paper-plane"></i> Send Message
-                            </button>
-                        </form>
+                    <!-- CONTACT FORM -->
+                    <div class="contact-form-col">
+                        <div class="contact-form-card glass-card">
+                            <h3 class="form-title"><i class="fa-solid fa-paper-plane"></i> Send Me a Message</h3>
+
+                            <p class="form-notice">
+                                <i class="fa-solid fa-paper-plane"></i> Send a message directly to
+                                <strong>yehaninawarathna2003@gmail.com</strong>.
+                            </p>
+
+                            <form id="contact-form" class="contact-form"
+                                action="https://formsubmit.co/ajax/yehaninawarathna2003@gmail.com" method="POST">
+                                <!-- FormSubmit Endpoint Configurations -->
+                                <input type="hidden" name="_captcha" value="false">
+                                <input type="hidden" name="_template" value="table">
+                                <input type="hidden" name="_subject" value="New Portfolio Message from Visitor">
+                                <div class="form-group">
+                                    <label for="name">Your Name <span class="required">*</span></label>
+                                    <div class="input-wrapper">
+                                        <i class="fa-solid fa-user input-icon"></i>
+                                        <input type="text" id="name" name="name" placeholder="Enter your full name"
+                                            required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">Your Email <span class="required">*</span></label>
+                                    <div class="input-wrapper">
+                                        <i class="fa-solid fa-envelope input-icon"></i>
+                                        <input type="email" id="email" name="email"
+                                            placeholder="Enter your email address" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="subject">Subject <span class="required">*</span></label>
+                                    <div class="input-wrapper">
+                                        <i class="fa-solid fa-heading input-icon"></i>
+                                        <input type="text" id="subject" name="subject"
+                                            placeholder="Project Inquiry / Internship Opportunity" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="message">Message <span class="required">*</span></label>
+                                    <div class="input-wrapper textarea-wrapper">
+                                        <i class="fa-solid fa-comment-dots input-icon"></i>
+                                        <textarea id="message" name="message" rows="4"
+                                            placeholder="Write your message here..." required></textarea>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary btn-block" id="submit-btn">
+                                    <i class="fa-solid fa-paper-plane"></i>
+                                    <span>Send Message</span>
+                                </button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+
     </main>
 
-    <!-- FOOTER -->
+    <!-- 9. FOOTER -->
     <footer class="site-footer">
         <div class="container footer-container">
-            <div class="footer-left">
-                <a href="#home" class="footer-logo">J.A. Yehani Prabodhya</a>
-                <p>ICT Undergraduate | University of Vavuniya</p>
+            <div class="footer-brand">
+                <h3 class="footer-name">J.A. Yehani Prabodhya</h3>
+                <p class="footer-role">ICT Undergraduate | UI/UX Designer | Web Developer</p>
+                <p class="footer-uni"><i class="fa-solid fa-building-columns"></i> University of Vavuniya</p>
             </div>
-            
+
             <div class="footer-nav">
                 <a href="#home">Home</a>
-                <a href="#about">About Me</a>
+                <a href="#about">About</a>
                 <a href="#education">Education</a>
                 <a href="#skills">Skills</a>
                 <a href="#projects">Projects</a>
@@ -695,156 +983,192 @@
                 <a href="#cv">CV</a>
                 <a href="#contact">Contact</a>
             </div>
-            
-            <div class="footer-right">
-                <a href="#home" class="back-to-top" aria-label="Back to Top">
-                    <i class="fa-solid fa-arrow-up"></i>
+
+            <div class="footer-social-bar">
+                <a href="https://github.com/yehaninawarathna2003-tech" target="_blank" rel="noopener noreferrer"
+                    title="GitHub" aria-label="GitHub Profile">
+                    <i class="fa-brands fa-github"></i>
                 </a>
-                <p class="copyright">&copy; 2026 J.A. Yehani Prabodhya. All rights reserved.</p>
+                <a href="https://www.linkedin.com/in/yehani-prabodhya-34624b344/" target="_blank"
+                    rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn Profile">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="mailto:yehaninawarathna2003@gmail.com" title="Email" aria-label="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2026 J.A. Yehani Prabodhya. All Rights Reserved.</p>
+
+                <a href="#home" class="back-to-top-btn" aria-label="Back to Top" title="Back to top">
+                    <i class="fa-solid fa-arrow-up"></i>
+                    <span>Back to Top</span>
+                </a>
             </div>
         </div>
     </footer>
 
-    <!-- MODALS FOR PROJECTS -->
-    <!-- Modal 1 -->
-    <div class="modal-overlay" id="modal-p1">
-        <div class="modal-container glass-card">
-            <button class="modal-close">&times;</button>
+    <!-- PROJECT MODALS (FULL DETAILS SHOWCASE) -->
+
+    <!-- MODAL 1: LKmart -->
+    <div class="modal-overlay" id="modal-project-1" aria-hidden="true">
+        <div class="modal-container glass-card" role="dialog" aria-labelledby="modal-p1-title">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
             <div class="modal-header">
-                <h3>Personal Portfolio Website</h3>
-                <span class="modal-subtitle">Project 01 — Web Development</span>
+                <span class="modal-category"><i class="fa-solid fa-palette"></i> UI/UX Design</span>
+                <h3 id="modal-p1-title">LKmart – Mobile Accessories Shop</h3>
             </div>
             <div class="modal-body">
-                <img src="assets/portfolio_preview.png" alt="Portfolio Detailed Preview" class="modal-img">
-                <p><strong>Description:</strong> A responsive personal portfolio website developed to present my education, skills, projects, career objectives, and contact information in a professional way.</p>
-                <h4>Technologies Used:</h4>
-                <div class="tech-tags">
-                    <span class="tech-tag">HTML5</span>
-                    <span class="tech-tag">CSS3</span>
-                    <span class="tech-tag">JavaScript</span>
+                <img src="assets/portfolio_preview.png" alt="LKmart UI UX Design Preview" class="modal-img">
+                <h4>Project Overview</h4>
+                <p>
+                    LKmart is a UI/UX design project for a modern mobile accessories shopping platform. The design
+                    focuses on creating a simple, attractive, and user-friendly shopping experience where customers can
+                    easily browse, explore, and purchase mobile accessories.
+                </p>
+                <p>
+                    The project includes intuitive navigation, product displays, category sections, product details, and
+                    a smooth user journey. The interface was designed with a clean and modern visual style to make
+                    shopping convenient and enjoyable for users.
+                </p>
+
+                <div class="modal-specs">
+                    <div class="spec-item"><strong>Role:</strong> UI/UX Designer</div>
+                    <div class="spec-item"><strong>Tool:</strong> Figma</div>
+                    <div class="spec-item"><strong>Focus Areas:</strong> User Interface Design, User Experience,
+                        Wireframing, Prototyping</div>
                 </div>
-                <h4>Detailed Contributions:</h4>
-                <ul>
-                    <li>Designed the website layout and modern color palette.</li>
-                    <li>Developed responsive semantic HTML markup for all SAD assignment sections.</li>
-                    <li>Created custom glassmorphism styling and dark/light mode CSS.</li>
-                    <li>Implemented dynamic JavaScript features, smooth scrolling, and form notifications.</li>
+
+                <h4>Key Design Features</h4>
+                <ul class="modal-features-list">
+                    <li><i class="fa-solid fa-check"></i> Clean, responsive e-commerce layout optimized for mobile &amp;
+                        desktop</li>
+                    <li><i class="fa-solid fa-check"></i> Intuitive category navigation for quick accessory discovery
+                    </li>
+                    <li><i class="fa-solid fa-check"></i> Interactive wireframes and high-fidelity clickable Figma
+                        prototype</li>
+                    <li><i class="fa-solid fa-check"></i> Visual hierarchy tailored for product browsing and cart
+                        checkout</li>
                 </ul>
             </div>
         </div>
     </div>
 
-    <!-- Modal 2 -->
-    <div class="modal-overlay" id="modal-p2">
-        <div class="modal-container glass-card">
-            <button class="modal-close">&times;</button>
+    <!-- MODAL 2: Supermarket Management System -->
+    <div class="modal-overlay" id="modal-project-2" aria-hidden="true">
+        <div class="modal-container glass-card" role="dialog" aria-labelledby="modal-p2-title">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
             <div class="modal-header">
-                <h3>Supermarket POS System</h3>
-                <span class="modal-subtitle">Project 02 — System Analysis & UI Design</span>
+                <span class="modal-category java-badge"><i class="fa-brands fa-java"></i> Java Application</span>
+                <h3 id="modal-p2-title">Supermarket Management System</h3>
             </div>
             <div class="modal-body">
-                <img src="assets/pos_preview.png" alt="POS System Detailed Preview" class="modal-img">
-                <p><strong>Description:</strong> A proposed Point of Sale system designed to help a supermarket manage sales, products, customers, and stock efficiently.</p>
-                <h4>Core Modules:</h4>
-                <div class="tech-tags">
-                    <span class="tech-tag">Product Management</span>
-                    <span class="tech-tag">Sales Management</span>
-                    <span class="tech-tag">Stock Management</span>
-                    <span class="tech-tag">Customer Management</span>
-                    <span class="tech-tag">Bill Generation</span>
+                <img src="assets/pos_preview.png" alt="Supermarket Management System Java Application Preview"
+                    class="modal-img">
+                <h4>Project Overview</h4>
+                <p>
+                    The Supermarket Management System is a Java-based application designed to simplify and manage common
+                    supermarket operations.
+                </p>
+                <p>
+                    The system allows users to manage products, handle customer purchases, calculate bills, and maintain
+                    essential sales information. This project helped me improve my Java programming, object-oriented
+                    programming, problem-solving, and application development skills while gaining practical experience
+                    in developing a functional software solution.
+                </p>
+
+                <div class="modal-specs">
+                    <div class="spec-item"><strong>Role:</strong> Java Developer</div>
+                    <div class="spec-item"><strong>Technology:</strong> Java</div>
+                    <div class="spec-item"><strong>Focus Areas:</strong> Application Development, Object-Oriented
+                        Programming, Problem Solving</div>
                 </div>
-                <h4>Detailed Contributions:</h4>
-                <ul>
-                    <li>Conducted system analysis & requirements gathering for supermarket retail operations.</li>
-                    <li>Designed user-friendly wireframes and interface dashboards for checkout operators.</li>
-                    <li>Planned transaction data flows and bill printing logic.</li>
+
+                <h4>Core Features</h4>
+                <ul class="modal-features-list">
+                    <li><i class="fa-solid fa-check"></i> Product Management (Adding, editing, updating stock)</li>
+                    <li><i class="fa-solid fa-check"></i> Customer Purchase Management</li>
+                    <li><i class="fa-solid fa-check"></i> Automatic Bill Calculation and billing logs</li>
+                    <li><i class="fa-solid fa-check"></i> Sales Information Management &amp; inventory tracking</li>
                 </ul>
             </div>
         </div>
     </div>
 
-    <!-- Modal 3 -->
-    <div class="modal-overlay" id="modal-p3">
-        <div class="modal-container glass-card">
-            <button class="modal-close">&times;</button>
+    <!-- MODAL 3: University Event Management System -->
+    <div class="modal-overlay" id="modal-project-3" aria-hidden="true">
+        <div class="modal-container glass-card" role="dialog" aria-labelledby="modal-p3-title">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
             <div class="modal-header">
-                <h3>Bakery Database Management System</h3>
-                <span class="modal-subtitle">Project 03 — Database Design & SQL</span>
+                <span class="modal-category cs-badge"><i class="fa-solid fa-code"></i> C# Application</span>
+                <h3 id="modal-p3-title">University Event Management System</h3>
             </div>
             <div class="modal-body">
-                <img src="assets/bakery_db_preview.png" alt="Bakery Database Preview" class="modal-img">
-                <p><strong>Description:</strong> A database system designed to manage bakery product information, including product names, categories, prices, quantities, suppliers, manufacture dates, and expiry dates.</p>
-                <h4>Technologies Used:</h4>
-                <div class="tech-tags">
-                    <span class="tech-tag">SQL</span>
-                    <span class="tech-tag">Database Management System</span>
-                    <span class="tech-tag">ER Diagram</span>
+                <img src="assets/bakery_db_preview.png" alt="University Event Management System C# Application Preview"
+                    class="modal-img">
+                <h4>Project Overview</h4>
+                <p>
+                    The University Event Management System is a C#-based application designed to simplify the planning
+                    and management of university events.
+                </p>
+                <p>
+                    The system helps organize event details, manage participants, and streamline event-related
+                    activities through a user-friendly interface. This project gave me practical experience in C#
+                    programming, database management, user interface development, and application design. It also
+                    improved my ability to understand real-world requirements and develop software solutions to meet
+                    user needs.
+                </p>
+
+                <div class="modal-specs">
+                    <div class="spec-item"><strong>Role:</strong> C# Developer</div>
+                    <div class="spec-item"><strong>Technology:</strong> C# &amp; Database</div>
+                    <div class="spec-item"><strong>Focus Areas:</strong> Application Development, Database Management,
+                        UI Design, Problem Solving</div>
                 </div>
-                <h4>Detailed Contributions:</h4>
-                <ul>
-                    <li>Designed normalized relational database schema (3NF).</li>
-                    <li>Created Entity-Relationship (ER) Diagrams showing relationships between products, categories, suppliers, and sales.</li>
-                    <li>Wrote DDL and DML SQL scripts with sample dataset insertion.</li>
+
+                <h4>Core Features</h4>
+                <ul class="modal-features-list">
+                    <li><i class="fa-solid fa-check"></i> Event Management &amp; Scheduling</li>
+                    <li><i class="fa-solid fa-check"></i> Participant Management &amp; RSVP Tracking</li>
+                    <li><i class="fa-solid fa-check"></i> Event Information &amp; Venue Allocation Management</li>
+                    <li><i class="fa-solid fa-check"></i> Database Integration with relational data storage</li>
+                    <li><i class="fa-solid fa-check"></i> Clean User-Friendly Graphical Interface</li>
                 </ul>
             </div>
         </div>
     </div>
 
-    <!-- CV PREVIEW MODAL -->
-    <div class="modal-overlay" id="modal-cv">
-        <div class="modal-container glass-card modal-lg">
-            <button class="modal-close">&times;</button>
-            <div class="cv-preview-paper" id="cv-print-area">
-                <div class="cv-paper-header">
-                    <h2>J.A. YEHANI PRABODHYA</h2>
-                    <p class="cv-paper-title">ICT Undergraduate | Web Development Enthusiast</p>
-                    <p class="cv-paper-contact">
-                        Location: Sri Lanka &bull; Email: yehani.prabodhya@example.com &bull; GitHub: github.com/yehani-prabodhya
-                    </p>
-                </div>
-                <hr>
-                
-                <div class="cv-paper-section">
-                    <h3>CAREER OBJECTIVE</h3>
-                    <p>My career objective is to become a skilled IT professional with strong knowledge of web development and software design. I aim to gain practical industry experience, improve my technical and problem-solving abilities, and develop innovative and user-friendly digital solutions.</p>
-                </div>
-
-                <div class="cv-paper-section">
-                    <h3>EDUCATION</h3>
-                    <p><strong>Bachelor of Information and Communication Technology (BICT)</strong> — Current Status: Undergraduate</p>
-                    <p>University of Vavuniya &bull; Faculty of Technological Studies &bull; Department of ICT</p>
-                    <p><em>Relevant Coursework:</em> System Analysis & Design, DBMS, Computer Networks, Operations Research, Computer Graphics, Accounting</p>
-                </div>
-
-                <div class="cv-paper-section">
-                    <h3>TECHNICAL SKILLS</h3>
-                    <p><strong>Web Development:</strong> HTML5, CSS3, JavaScript</p>
-                    <p><strong>Database:</strong> SQL, Database Design, ER Diagrams</p>
-                    <p><strong>System Analysis & Design:</strong> UML, Use Case Diagrams, Activity Diagrams, DFD, Requirements Analysis</p>
-                    <p><strong>Creative & Tools:</strong> Blender 3D, Basic UI Design, Git & GitHub</p>
-                    <p><strong>Soft Skills:</strong> Communication, Teamwork, Problem Solving, Creativity, Time Management, Adaptability, Quick Learning</p>
-                </div>
-
-                <div class="cv-paper-section">
-                    <h3>KEY ACADEMIC PROJECTS</h3>
-                    <p><strong>1. Personal Portfolio Website:</strong> HTML5, CSS3, JavaScript responsive web application.</p>
-                    <p><strong>2. Supermarket POS System:</strong> System feature planning & UI design for product, sales, stock, and customer management.</p>
-                    <p><strong>3. Bakery Database Management System:</strong> SQL database tables design, ER diagram modeling, and query development.</p>
-                </div>
+    <!-- MODAL CV VIEWER -->
+    <div class="modal-overlay" id="modal-cv-viewer" aria-hidden="true">
+        <div class="modal-container glass-card modal-lg" role="dialog" aria-labelledby="modal-cv-title">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <div class="modal-header">
+                <span class="modal-category"><i class="fa-solid fa-file-pdf"></i> PDF Document Viewer</span>
+                <h3 id="modal-cv-title">J.A. Yehani Prabodhya Nawarathna – Curriculum Vitae</h3>
             </div>
-            
-            <div class="modal-footer">
-                <button class="btn btn-primary" id="print-cv-modal-btn">
-                    <i class="fa-solid fa-print"></i> Print / Save as PDF
-                </button>
+            <div class="modal-body">
+                <div class="modal-pdf-container">
+                    <iframe src="Yehani_CV_edited.pdf" title="Yehani Prabodhya CV Full View"
+                        class="modal-pdf-iframe"></iframe>
+                </div>
+                <div class="modal-cv-footer">
+                    <a href="Yehani_CV_edited.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Open in New Tab
+                    </a>
+                    <a href="Yehani_CV_edited.pdf" download="Yehani_CV_edited.pdf" class="btn btn-secondary">
+                        <i class="fa-solid fa-download"></i> Download PDF
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 
     <!-- TOAST NOTIFICATION CONTAINER -->
-    <div id="toast-container"></div>
+    <div id="toast-container" aria-live="polite" aria-atomic="true"></div>
 
-    <!-- Custom Script -->
+    <!-- JavaScript File -->
     <script src="script.js"></script>
 </body>
+
 </html>
